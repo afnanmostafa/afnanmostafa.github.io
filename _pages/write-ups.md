@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Writeups"
+title: "Write-ups"
 image: moonlanding3.jpg
 permalink: /writeups/
 ---
