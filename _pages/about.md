@@ -5,23 +5,22 @@ image: McLaren.jpg
 permalink: /about/
 ---
 
-Greetings! A little about me: I am a graduate student at the University of Rochester, working on NSF-funded projects on phase transitions in materials in extreme conditions under the supervision of Dr. Niaz Abdolrahim.
+Greetings! Here's a bit about me: I'm a Formula 1 enthusiast and a proud papaya fan! I believe Ayrton Senna was the greatest motorsport driver in history. In all seriousness, I am a graduate student at the [University of Rochester](https://www.rochester.edu/). I am working on NSF-funded projects on phase transitions in materials in extreme conditions under the supervision of [Dr. Niaz Abdolrahim](https://www.hajim.rochester.edu/me/sites/abdolrahim/).
 
-Recently, I graduated with an MS from the University of Massachusetts Amherst (UMass Amherst), where I was fortunate enough to work on various projects under the guidance of Dr. Ashwin Ramasubramaniam and Dr. Dimitrios Maroudas. Army Research Laboratory funded the projects wherein the primary objective was to develop graphene-nanodiamond composites with superior mechanical and thermal properties.
+I recently completed my MS at the [University of Massachusetts Amherst (UMass Amherst)](https://www.umass.edu/), where I was fortunate to contribute to projects funded by the [Army Research Laboratory](https://arl.devcom.army.mil/), focused on developing graphene-nanodiamond composites with enhanced mechanical and thermal properties under the guidance of [Dr. Ashwin Ramasubramaniam](https://scholar.google.com/citations?user=m_vW2OUAAAAJ&hl=en) and [Dr. Dimitrios Maroudas (https://scholar.google.com/citations?user=djdYARAAAAAJ&hl=en).
 
-I completed my B.Sc. from the Bangladesh University of Engineering and Technology (BUET) on October 22, 2018. Then, I worked as an HVAC (Heating, Ventilation, and Air Conditioning) Design Coordinator and Project Supervisor at MEP Design Studio for a while. 
+I earned my B.Sc. at [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/web/) in October 2018. Afterward, I gained practical experience as an HVAC Design Coordinator and Project Supervisor at MEP Design Studio. 
 
-Hobby: Learning new software tools and discussing with people how lucky human beings are to come this far!!
+__Hobbies:__ Learning new software tools and reflecting on how fortunate we are as humans to have come this far!
 
-__Short-term Goal:__ Learning more and more and trying to be a better person each day
+__Short-term Goal:__ To keep learning and growing each day, both academically and personally.
 
-__Long-term Goal:__ Contributing to the world with my knowledge and expertise.
+__Long-term Goal:__ To use my knowledge and skills to contribute meaningfully to the world.
 
-__Dream:__ A research engineer/scientist at NASA!! [no harm in dreaming big, right?]
+__Dream:__ To work as a research engineer or scientist at NASA! (After all, there’s no harm in dreaming big, right?)
 
-#### Some Facts: 
+#### Fun Facts:
 
-I am a movie-loving person, especially the ones relating to the Sci-Fi and mind-twisting genres. I am also a sport-maniac, and Badminton has been my go-to for years.
+I’m a passionate movie lover, especially when it comes to Sci-Fi and mind-bending films. In my view, Kubrick’s 2001: A Space Odyssey stands as the greatest Sci-Fi movie of all time. If you disagree, compare it to its sequel, 2010: The Year We Make Contact; the difference is like night and day, reflecting on Kubrick's unparalleled impact.
 
-I love F1, soccer, NBA, cricket, and playing video games.
-
+I’m also a sports enthusiast, with Badminton as my longtime favorite. Beyond that, I love watching and following F1, soccer, the NBA, cricket, and, of course, enjoy playing video games (I peaked plat 3 in Valorant with no routine).
