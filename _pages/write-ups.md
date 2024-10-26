@@ -2,7 +2,7 @@
 layout: page
 title: "Write-ups"
 image: moonlanding3.jpg
-permalink: /writeups/
+permalink: /write-ups/
 ---
 
 **Active writer in 3 Medium publications:**  
