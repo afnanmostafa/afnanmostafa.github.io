@@ -2,7 +2,7 @@
 # General Site Settings
 
 title: Afnan Mostafa
-description: ddddd
+description: personal portfolio
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://afnanmostafa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -10,16 +10,19 @@ url: "https://afnanmostafa.github.io" # the base hostname & protocol for your si
 #-------------------------------
 # About Section
 author-name:   Afnan Mostafa
-author-avatar: 09.jpg
+#author-avatar: 09.jpg
 
 
 #-------------------------------
 # Contact links
-facebook:  https://www.facebook.com/itsafnan/ # Add your Facebook handle
-twitter:   https://twitter.com/ # Add your Facebook handle
-instagram: https://www.instagram.com/ # Add your Facebook handle
-pinterest: https://www.pinterest.com/ # Add your Facebook handle
-
+#facebook:  https://www.facebook.com/itsafnan/ # Add your Facebook handle
+#twitter:   https://twitter.com/ # Add your Facebook handle
+#instagram: https://www.instagram.com/ # Add your Facebook handle
+#pinterest: https://www.pinterest.com/ # Add your Facebook handle
+LinkedIn: https://www.linkedin.com/in/afnan-mostafa
+GitHub: https://github.com/afnanmostafa
+GoogleScholar: https://scholar.google.com/citations?user=oFWNZhsAAAAJ&hl=en
+ResearchGate: https://www.researchgate.net/profile/Afnan_Mostafa
 
 #-------------------------------
 # Comment Section (Disqus)
