@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Publications & Presentations"
+image: chopsticks.jpg
 permalink: /publications/
 ---
 
