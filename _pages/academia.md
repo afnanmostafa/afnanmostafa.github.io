@@ -6,12 +6,10 @@ permalink: /academia/
 ---
 
 ## <span style="color:#E2A866">University of Rochester</span>
-{% highlight markdown %}
 **Ph.D. Student**  
 Mechanical Engineering (Fall 2023 - Present)  
 GPA: 4.00/4.00  
 **Office**: Hopeman Engineering Bldg, NY 14627  
-{% endhighlight %}
 
 ## <span style="color:#E2A866">University of Massachusetts Amherst</span>
 **Master of Science**  
