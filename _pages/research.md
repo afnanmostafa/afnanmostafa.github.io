@@ -38,8 +38,8 @@ permalink: /research/
 
 <div style="text-align: center; margin-top: 20px;">
     <figure>
-        <img src="{{ site.baseurl }}/img/Sourcefile_APL_figure1.png" alt="APL" style="width: 80%;">
-        <figcaption>Graphene-Nanodiamond Superstructures</figcaption>
+        <img src="{{ site.baseurl }}/img/sac.png" alt="AIP" style="width: 80%;">
+        <figcaption>SAC Alloy</figcaption>
     </figure>
 </div>
 
