@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Accolades"
+image: bigdipper.jpg
 permalink: /accolades/
 ---
 
