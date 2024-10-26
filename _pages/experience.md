@@ -1,15 +1,21 @@
 ---
 layout: page
 title: "Experience"
-image: senna.jpg
+image: arg.jpg
 permalink: /experience/
 ---
 
 # Professional Experience
 
+### Graduate Research Assistant  
+**University of Rochester**  
+*May 2024 – Present*  
+
+---
+
 ### Graduate Teaching Assistant  
 **University of Rochester**  
-*Sep 2023 – Present*  
+*Sep 2023 – May 2024*  
 Courses: Engineering Dynamics, Intro to Solids  
 - Assisted professors with homework, projects, and exam preparation and grading.
 - Conducted weekly office hours, recitations, workshops, and labs.
