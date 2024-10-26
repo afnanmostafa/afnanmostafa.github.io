@@ -29,7 +29,7 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
 
 <div style="text-align: center; margin-top: 20px;">
     <figure>
-        <img src="{{ site.baseurl }}/img/Monolith.jpg" alt="First instance of intelligence" style="width: 50%;">
+        <img src="{{ site.baseurl }}/img/Monolith.jpg" alt="First instance of intelligence" style="width: 80%;">
         <figcaption>First instance of intelligence</figcaption>
     </figure>
 </div>
