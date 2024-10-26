@@ -6,7 +6,7 @@ permalink: /skills/
 
 # Technical Skills
 
-**<span style="color:#7FCEC2">Programming**\*:</span> &nbsp; Python, Matlab, C/ C++, Bash, SPARK, R, Go, Fortran, MySQL, SPSS, SAS, HAL/S  
+**<span style="color:#7FCEC2">Programming</span>**\*: &nbsp; Python, Matlab, C/ C++, Bash, SPARK, R, Go, Fortran, MySQL, SPSS, SAS, HAL/S  
 **<span style="color:#7FCEC2">Simulation**\*:</span> &nbsp; LAMMPS, Atomsk, VMD, ANSYS, ABAQUS, CARRIER HAP  
 **<span style="color:#7FCEC2">Visualization**:</span> &nbsp; OVITO, Vesta, VMD  
 **<span style="color:#7FCEC2">3D CAD**\*:</span> &nbsp; SolidWorks, AutoCAD, OnShape, Adobe Illustrator  
