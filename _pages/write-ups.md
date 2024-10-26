@@ -12,10 +12,10 @@ permalink: /writeups/
 
 ## Articles
 
-1. **Molecular Dynamics: NVE, NVT, and NPT** [Link](https://afnanmostafa.medium.com/molecular-dynamics-nve-nvt-and-npt-a0cbe4aa9f3e)
+1. **Molecular Dynamics: NVE, NVT, and NPT** [Link](https://afnanmostafa.medium.com/molecular-dynamics-nve-nvt-and-npt-a0cbe4aa9f3e)  
    Published on Medium
 
-1. **Molecular Dynamics: Ensembles & Phase Space** [Link](https://afnanmostafa.medium.com/molecular-dynamics-ensembles-phase-space-adecf0483495)
+1. **Molecular Dynamics: Ensembles & Phase Space** [Link](https://afnanmostafa.medium.com/molecular-dynamics-ensembles-phase-space-adecf0483495)  
    Published on Medium
 
 1. **How to Compile LAMMPS on HPC Clusters using Mighty Makefiles!!** [Link](https://afnanmostafa.medium.com/how-to-compile-lammps-on-hpc-clusters-using-mighty-makefiles-7f45b109ab74)  
