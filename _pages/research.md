@@ -15,8 +15,8 @@ permalink: /research/
 
 <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
     <figure style="text-align: center;">
-        <img src="{{ site.baseurl }}/img/Sourcefile_APL_figure1.jpg" alt="APL 1" style="width: 80%;">
-        <figcaption>Graphene-Nanodiamond Superstructures</figcaption>
+        <img src="{{ site.baseurl }}/img/projects.jpg" alt="Proj" style="width: 80%;">
+        <figcaption>Bread earners</figcaption>
     </figure>
     <figure style="text-align: center;">
         <img src="{{ site.baseurl }}/img/Sourcefile_APL_figure2.jpg" alt="APL 2" style="width: 80%;">
