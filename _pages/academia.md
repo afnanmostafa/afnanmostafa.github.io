@@ -46,5 +46,3 @@ GPA: 5.00/5.00
 **Secondary School Certificate (SSC) in Science**  
 (2001 - 2011)  
 GPA: 5.00/5.00  
-
----
