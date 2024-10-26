@@ -1,11 +1,6 @@
 ---
 layout: page
 title: "Research"
-<div style="text-align: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=RBtlPT23PTM" 
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen></iframe>
-</div>
 permalink: /research/
 ---
 
