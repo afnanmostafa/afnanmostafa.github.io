@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Publications & Presentations"
-image: chopsticks.jpg
+title: "Publications"
+image: blackhole.jpg
 permalink: /publications/
 ---
 
@@ -16,8 +16,6 @@ permalink: /publications/
 
 # Presentations
 
-- **A. Mostafa**, L. Vu, F. Li, A. Dey, H. Askari, E. Rabkin, N. Abdolrahim, “Novel Methods for Phase-Transformation-Assisted Twinning in Molybdenum Nanomaterials: Simulation and Experimental Study,” *ASME International Mechanical Engineering Congress and Exposition (IMECE) 2024*, Portland, OR (Scheduled).
-- S. Qian, **A. Mostafa**, F. Li, E. Rabkin, N. Abdolrahim, “Influence of Non-Uniaxial Bending on Twinning and Phase Transformation in Molybdenum Nanowires,” *ASME International Mechanical Engineering Congress and Exposition (IMECE) 2024*, Portland, OR (Scheduled).
 - **A. Mostafa**, L. Vu, F. Li, A. Dey, H. Askari, E. Rabkin, N. Abdolrahim, “Atomistic insights on orientation-dependent deformation mechanisms in Molybdenum: Single-crystal nanowires and polycrystals,” *TMS Annual Meeting & Exhibition 2025*, Las Vegas, NV (Scheduled).
 - F. Li, **A. Mostafa**, N. Abdolrahim, J. Zimmerman, Z. Liang, L. Klinger, J. Yeom, J. Janczak-Rusch, E. Rabkin, “Solid state dewetting of co-sputtered thin Mo-Cu films accompanied by phase separation,” *TMS Annual Meeting & Exhibition 2025*, Las Vegas, NV (Scheduled).
 - S. Qian, **A. Mostafa**, F. Li, E. Rabkin, N. Abdolrahim, “Influence of Non-Uniaxial Bending on Twinning and Phase Transformation in Molybdenum Nanowires,” *TMS Annual Meeting & Exhibition 2025*, Las Vegas, NV (Scheduled).
@@ -29,4 +27,6 @@ permalink: /publications/
 
 # Poster Sessions
 
+- **A. Mostafa**, L. Vu, F. Li, A. Dey, H. Askari, E. Rabkin, N. Abdolrahim, “Novel Methods for Phase-Transformation-Assisted Twinning in Molybdenum Nanomaterials: Simulation and Experimental Study,” *ASME International Mechanical Engineering Congress and Exposition (IMECE) 2024*, Portland, OR (Scheduled).
+- S. Qian, **A. Mostafa**, F. Li, E. Rabkin, N. Abdolrahim, “Influence of Non-Uniaxial Bending on Twinning and Phase Transformation in Molybdenum Nanowires,” *ASME International Mechanical Engineering Congress and Exposition (IMECE) 2024*, Portland, OR (Scheduled).
 - **A. Mostafa**, A. Ramasubramaniam, D. Maroudas, "Comparative Atomistic Study of Phonon Thermal Conductivity of Graphene and Graphene-Nanodiamond Composites," *MSE Poster Symposium*, UMass Amherst, Amherst, November 2022.
