@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Skills"
+image: aurora.jpg
 permalink: /skills/
 ---
 
