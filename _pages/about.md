@@ -26,3 +26,6 @@ I’m a passionate movie lover, especially when it comes to Sci-Fi and mind-bend
 I’m also a sports enthusiast, with Badminton as my longtime favorite. Beyond that, I love watching and following F1, soccer, the NBA, cricket, and, of course, enjoy playing video games (I peaked plat 3 in Valorant with no routine).
 
 Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the greatest of all time, INDEED.</span>
+
+
+image: McLaren.jpg
