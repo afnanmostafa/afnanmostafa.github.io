@@ -10,6 +10,8 @@ permalink: /write-ups/
 - *Curious*  
 - *Level Up Coding*  
 
+---
+
 ### In reverse-chronological order, 
 
 1. **Molecular Dynamics: NVE, NVT, and NPT** [Link](https://afnanmostafa.medium.com/molecular-dynamics-nve-nvt-and-npt-a0cbe4aa9f3e)  
