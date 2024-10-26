@@ -6,7 +6,7 @@ permalink: /skills/
 
 # Technical Skills
 
-**Programming***: &nbsp; Python, Matlab, C/ C++, Bash, SPARK, R, Go, Fortran, MySQL, SPSS, SAS, HAL/S  
+**Programming**\*: &nbsp; Python, Matlab, C/ C++, Bash, SPARK, R, Go, Fortran, MySQL, SPSS, SAS, HAL/S
 **Simulation***: &nbsp; LAMMPS, Atomsk, VMD, ANSYS, ABAQUS, CARRIER HAP  
 **Visualization**: &nbsp; OVITO, Vesta, VMD  
 **3D CAD***: &nbsp; SolidWorks, AutoCAD, OnShape, Adobe Illustrator  
@@ -19,7 +19,7 @@ permalink: /skills/
 **IDEs**: &nbsp; VS Code, Atom, Sublime Text, Notepad++, Jupyter Notebook, PyCharm  
 **Others**: &nbsp; Git, High-Performance Computing, Machine and Deep Learning Algorithms, Artificial Intelligence, Density Functional Theory, Digital Image Processing Algorithms  
 
-*ordered according to decreasing fluency*
+*ordered according to decreasing fluency
 
 ---
 
