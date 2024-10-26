@@ -23,37 +23,29 @@
   {% else %}
   {% endif %}
 
-  <div class="widget widget-social">
-    <h3 class="widget-title">Subscribe & Follow</h3>
-    <ul class="social-profiles list-reset">
-      {% if site.facebook %}
-      <li class="social-profiles-item">
-        <a href="{{ site.facebook }}" class="social-profiles-link"><i class="ion ion-logo-facebook"></i></a>
-      </li>
-      {% else %} {% endif %}
+<div class="widget widget-social">
+  <h3 class="widget-title">Make a connection</h3>
+  <ul class="social-profiles list-reset">
+    {% if site.linkedin %}
+    <li class="social-profiles-item">
+      <a href="{{ site.linkedin }}" class="social-profiles-link">
+        <i class="ion ion-logo-linkedin"></i> <!-- LinkedIn Icon -->
+      </a>
+    </li>
+    {% endif %}
 
-       {% if site.twitter %}
-      <li class="social-profiles-item">
-        <a href="{{ site.twitter }}" class="social-profiles-link"><i class="ion ion-logo-twitter"></i></a>
-      </li>
-      {% else %} {% endif %}
-
-      {% if site.instagram %}
-      <li class="social-profiles-item">
-        <a href="{{ site.instagram }}" class="social-profiles-link"><i class="ion ion-logo-instagram"></i></a>
-      </li>
-      {% else %} {% endif %}
-
-      {% if site.pinterest %}
-      <li class="social-profiles-item">
-        <a href="{{ site.pinterest }}" class="social-profiles-link"><i class="ion ion-logo-pinterest"></i></a>
-      </li>
-      {% else %} {% endif %}
-    </ul>
-  </div>
+    {% if site.instagram %}
+    <li class="social-profiles-item">
+      <a href="{{ site.instagram }}" class="social-profiles-link">
+        <i class="ion ion-logo-instagram"></i> <!-- Instagram Icon -->
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</div>
 
   <div class="widget widget-newsletter">
-    <h3 class="widget-title">Newsletter</h3>
+    <h3 class="widget-title">Share a thought</h3>
     <div class="newsletter-subtitle">Get Interesting News</div>
     <div class="newsletter-text">Receive the latest news via email.</div>
     <form class="c-newsletter-form validate" action="{% if site.mailchimp %}//{{site.mailchimp}}{% else %}#{% endif %}" method="POST"
