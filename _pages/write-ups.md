@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Writeups"
-image: moonlanding2.jpg
+image: moonlanding3.jpg
 permalink: /writeups/
 ---
 
@@ -10,7 +10,7 @@ permalink: /writeups/
 - *Curious*  
 - *Level Up Coding*  
 
-## Articles
+### In reverse-chronological order, 
 
 1. **Molecular Dynamics: NVE, NVT, and NPT** [Link](https://afnanmostafa.medium.com/molecular-dynamics-nve-nvt-and-npt-a0cbe4aa9f3e)  
    Published on Medium
@@ -42,10 +42,10 @@ permalink: /writeups/
 1. **Nitty-Gritty of Quantum Mechanics From a Rubberneck’s POV (Detour Chapter: Space)** [Link](https://medium.com/swlh/nitty-gritty-of-quantum-mechanics-from-a-rubbernecks-pov-detour-section-1-space-chapter-2-97add32ddb37)  
     Published on Medium | *The Startup*
 
-1. **Nitty-Gritty of Quantum Mechanics from a Rubberneck’s POV (Chapter 1)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.ptjo86oy8v87)  
+1. **Nitty-Gritty of Quantum Mechanics from a Rubberneck’s POV (Chapter 1)** [Link](https://medium.com/curious/nitty-gritty-of-quantum-mechanics-from-a-rubbernecks-pov-chapter-1-53607fd7493b)  
     Published on Medium | *Curious*
 
-1. **HAL/S, Language of NASA’s Space Shuttle Programs (Part 1)** [Link](https://medium.com/curious/nitty-gritty-of-quantum-mechanics-from-a-rubbernecks-pov-chapter-1-53607fd7493b)  
+1. **HAL/S, Language of NASA’s Space Shuttle Programs (Part 1)** [Link](https://medium.com/swlh/hal-s-language-used-in-nasas-space-shuttle-programs-part-1-9c211e5cc0e7)  
     Featured and Published in *The Startup*
 
 1. **Constants in Big O Notation**  
