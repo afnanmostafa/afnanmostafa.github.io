@@ -21,8 +21,8 @@ __Dream:__ To work as a research engineer or scientist at NASA! (After all, ther
 
 #### Fun Facts:
 
-I’m a passionate movie lover, especially when it comes to Sci-Fi and mind-bending films. In my view, <span style="color:blue">Kubrick’s 2001: A Space Odyssey</span> stands as the greatest Sci-Fi movie of all time. If you disagree, compare it to its sequel, <span style="color:blue">2010: The Year We Make Contact</span>; the difference is like night and day, reflecting on Kubrick's unparalleled impact.
+I’m a passionate movie lover, especially when it comes to Sci-Fi and mind-bending films. In my view, <span style="color:white">Kubrick’s 2001: A Space Odyssey</span> stands as the greatest Sci-Fi movie of all time. If you disagree, compare it to its sequel, <span style="color:white">2010: The Year We Make Contact</span>; the difference is like night and day, reflecting on Kubrick's unparalleled impact.
 
 I’m also a sports enthusiast, with Badminton as my longtime favorite. Beyond that, I love watching and following F1, soccer, the NBA, cricket, and, of course, enjoy playing video games (I peaked plat 3 in Valorant with no routine).
 
-Oh, before you go, repeat after me: <span style="color:blue">Messi is the greatest of all time, INDEED.</span>
+Oh, before you go, repeat after me: <span style="color:white">Messi is the greatest of all time, INDEED.</span>
