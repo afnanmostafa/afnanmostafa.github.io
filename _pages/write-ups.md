@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Writeups"
-image: aurora.jpg
+image: moonlanding.jpg
 permalink: /writeups/
 ---
 
@@ -12,40 +12,40 @@ permalink: /writeups/
 
 ## Articles
 
-1. **Molecular Dynamics: NVE, NVT, and NPT**  
+1. **Molecular Dynamics: NVE, NVT, and NPT** [Link](https://afnanmostafa.medium.com/molecular-dynamics-nve-nvt-and-npt-a0cbe4aa9f3e)
    Published on Medium
 
-1. **Molecular Dynamics: Ensembles & Phase Space**  
+1. **Molecular Dynamics: Ensembles & Phase Space** [Link](https://afnanmostafa.medium.com/molecular-dynamics-ensembles-phase-space-adecf0483495)
    Published on Medium
 
-1. **How to Compile LAMMPS on HPC Clusters using Mighty Makefiles!!** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.244d8i2vd9bs)  
+1. **How to Compile LAMMPS on HPC Clusters using Mighty Makefiles!!** [Link](https://afnanmostafa.medium.com/how-to-compile-lammps-on-hpc-clusters-using-mighty-makefiles-7f45b109ab74)  
    Published on Medium
 
 1. **Binary vs. ASCII** [Link](https://levelup.gitconnected.com/binary-files-vs-ascii-files-106a0e07617d)  
    Published on Medium | *Level Up Coding*
 
-1. **How to use SED to manipulate text files (Part 2: pattern, regular expression)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.a0qivx3kfmai)  
+1. **How to use SED to manipulate text files (Part 2: pattern, regular expression)** [Link](https://levelup.gitconnected.com/how-to-use-sed-to-manipulate-text-files-part-2-pattern-regular-expression-77d2472a2043)  
    Published on Medium | *Level Up Coding*
 
-1. **How to use SED to manipulate text files (Part 1: print, delete, append)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.frqh6lafe5ft)  
+1. **How to use SED to manipulate text files (Part 1: print, delete, append)** [Link](https://levelup.gitconnected.com/how-to-use-sed-to-manipulate-text-files-part-1-print-delete-append-aa444143c4bd)  
    Published on Medium | *Level Up Coding*
 
-1. **Writing A Long, Yet Attention-Retaining Statement of Purpose (SOP)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.p2004wihnn01)  
+1. **Writing A Long, Yet Attention-Retaining Statement of Purpose (SOP)** [Link](https://afnanmostafa.medium.com/writing-a-long-yet-attention-retaining-statement-of-purpose-sop-c827df2cacf)  
    Published on Medium
 
-1. **How to Create Tables in LaTeX (in Layman’s Terms)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.4clxbj9inn4c)  
+1. **How to Create Tables in LaTeX (in Layman’s Terms)** [Link](https://levelup.gitconnected.com/how-to-create-tables-in-latex-in-laymans-terms-391f8478aa80)  
    Published on Medium | *Level Up Coding*
 
-1. **Mathematical Terms in LaTeX** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.g2vs4nse85vv)  
+1. **Mathematical Terms in LaTeX** [Link](https://medium.com/swlh/mathematical-terms-in-latex-c9675369b6f8)  
    Published on Medium | *The Startup*
 
-1. **Nitty-Gritty of Quantum Mechanics From a Rubberneck’s POV (Detour Chapter: Space)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.3ee0egusihpn)  
+1. **Nitty-Gritty of Quantum Mechanics From a Rubberneck’s POV (Detour Chapter: Space)** [Link](https://medium.com/swlh/nitty-gritty-of-quantum-mechanics-from-a-rubbernecks-pov-detour-section-1-space-chapter-2-97add32ddb37)  
     Published on Medium | *The Startup*
 
 1. **Nitty-Gritty of Quantum Mechanics from a Rubberneck’s POV (Chapter 1)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.ptjo86oy8v87)  
     Published on Medium | *Curious*
 
-1. **HAL/S, Language of NASA’s Space Shuttle Programs (Part 1)** [Link](https://sites.google.com/view/afnanmostafa/write-ups?authuser=0#h.c1retgjgs6ro)  
+1. **HAL/S, Language of NASA’s Space Shuttle Programs (Part 1)** [Link](https://medium.com/curious/nitty-gritty-of-quantum-mechanics-from-a-rubbernecks-pov-chapter-1-53607fd7493b)  
     Featured and Published in *The Startup*
 
 1. **Constants in Big O Notation**  
