@@ -7,9 +7,9 @@ permalink: /skills/
 # Technical Skills
 
 **<span style="color:#7FCEC2">Programming</span>**<span style="color:yellow">\*</span>: &nbsp; Python, Matlab, C/ C++, Bash, SPARK, R, Go, Fortran, MySQL, SPSS, SAS, HAL/S  
-**<span style="color:#7FCEC2">Simulation</span>**\*: &nbsp; LAMMPS, Atomsk, VMD, ANSYS, ABAQUS, CARRIER HAP  
+**<span style="color:#7FCEC2">Simulation</span>**<span style="color:yellow">\*</span>: &nbsp; LAMMPS, Atomsk, VMD, ANSYS, ABAQUS, CARRIER HAP  
 **<span style="color:#7FCEC2">Visualization</span>**: &nbsp; OVITO, Vesta, VMD  
-**<span style="color:#7FCEC2">3D CAD</span>**\*: &nbsp; SolidWorks, AutoCAD, OnShape, Adobe Illustrator  
+**<span style="color:#7FCEC2">3D CAD</span>**<span style="color:yellow">\*</span>: &nbsp; SolidWorks, AutoCAD, OnShape, Adobe Illustrator  
 **<span style="color:#7FCEC2">Document Preparation</span>**: &nbsp; LATEX, MathCAD, Vi, Nano, Microsoft Office Suite  
 **<span style="color:#7FCEC2">Info-graphic</span>**: &nbsp; Gnuplot, Plot Digitizer, Sigma Plot, ggplot2, Origin  
 **<span style="color:#7FCEC2">Job-Scheduling Utility</span>**: &nbsp; Slurm, PBS  
@@ -19,7 +19,7 @@ permalink: /skills/
 **<span style="color:#7FCEC2">IDEs</span>**: &nbsp; VS Code, Atom, Sublime Text, Notepad++, Jupyter Notebook, PyCharm  
 **<span style="color:#7FCEC2">Others</span>**: &nbsp; Git, High-Performance Computing, Machine and Deep Learning Algorithms, Artificial Intelligence, Density Functional Theory, Digital Image Processing Algorithms  
 
-\*ordered according to decreasing fluency
+<span style="color:yellow">\*ordered according to decreasing fluency</span>
 
 ---
 
