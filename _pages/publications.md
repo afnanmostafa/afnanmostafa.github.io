@@ -14,6 +14,8 @@ permalink: /publications/
 - Li F., **Mostafa, A.**, Zimmerman J., Liang Z., Klinger L., Yeom J., Janczak-Rusch J., Abdolrahim N., Rabkin E., “Solid state de-wetting of co-sputtered thin Mo-Cu films accompanied by phase separation,” 2024 (Under Preparation).
 - Qian, S., **Mostafa, A.**, Abdolrahim, N., “Orientation-dependent phase transformation in Molybdenum nanowires under uniaxial and bi-axial bending deformation,” 2024 (under preparation).
 
+---
+
 # Presentations
 
 - **A. Mostafa**, L. Vu, F. Li, A. Dey, H. Askari, E. Rabkin, N. Abdolrahim, “Atomistic insights on orientation-dependent deformation mechanisms in Molybdenum: Single-crystal nanowires and polycrystals,” *TMS Annual Meeting & Exhibition 2025*, Las Vegas, NV (Scheduled).
@@ -24,6 +26,8 @@ permalink: /publications/
 - M. Chen, **A. Mostafa**, A. Weerasinghe, A. R. Muniz, A. Ramasubramaniam, D. Maroudas, “2D Diamond Superstructures in Interlayer‑Bonded Twisted Bilayer Graphene: Mechanical Response and Thermal Transport from Molecular‑Dynamics Simulations,” *AIChE Annual Meeting 2022*, Phoenix, AZ. [Link](https://aiche.confex.com/aiche/2022/meetingapp.cgi/Paper/643040)
 - M. Chen, A. Weerasinghe, A. R. Muniz, **A. Mostafa**, A. Ramasubramaniam, D. Maroudas, “Thermomechanical Properties of Nanodiamond Superstructures in Interlayer‑Bonded Twisted Bilayer Graphene,” *AIChE Annual Meeting 2021*, Boston, MA.
 - **A. Mostafa**, M. Motalab, A. R. Faiyaz, R. Paul, “Uniaxial and cyclic stress‑strain behavior of lead‑free solders at the nanoscale,” *13th International Conference on Mechanical Engineering (ICME 2019)*, Dhaka, Bangladesh. [Link](https://pubs.aip.org/aip/acp/article-abstract/2324/1/030024/1027371/Uniaxial-and-cyclic-stress-strain-behavior-of-lead?redirectedFrom=fulltext)
+
+---
 
 # Poster Sessions
 
