@@ -9,8 +9,6 @@ title: "Research"
 permalink: /research/
 ---
 
-# Research Interests
-
 - Nanoscale materials
 - 0D, 1D, 2D material properties
 - Phase transition in metals
