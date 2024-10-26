@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Academia"
+image: nebula.jpg
 permalink: /academia/
 ---
 
