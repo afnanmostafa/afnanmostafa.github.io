@@ -18,7 +18,7 @@ Short-term Goal: To keep learning and growing each day, both academically and pe
 
 Long-term Goal: To use my knowledge and skills to contribute meaningfully to the world.
 
-Dream: To work as a research engineer or scientist at NASA! (After all, there’s no harm in dreaming big, right?)
+Dream: To work as a research engineer or scientist at NASA! (After all, no harm in dreaming big, right?)
 {% endhighlight %}
 
 #### Fun Facts:
