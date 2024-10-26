@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Experience"
-image: arg.jpg
+image: arg.png
 permalink: /experience/
 ---
 
