@@ -11,6 +11,7 @@ I recently completed my MS at the [University of Massachusetts Amherst (UMass Am
 
 I earned my B.Sc. at [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/web/) in October 2018. Afterward, I gained practical experience as an HVAC Design Coordinator and Project Supervisor at MEP Design Studio. 
 
+{% highlight markdown %}
 __Hobbies:__ Learning new software tools and reflecting on how fortunate we are as humans to have come this far!
 
 __Short-term Goal:__ To keep learning and growing each day, both academically and personally.
@@ -18,6 +19,7 @@ __Short-term Goal:__ To keep learning and growing each day, both academically an
 __Long-term Goal:__ To use my knowledge and skills to contribute meaningfully to the world.
 
 __Dream:__ To work as a research engineer or scientist at NASA! (After all, there’s no harm in dreaming big, right?)
+{% endhighlight %}
 
 #### Fun Facts:
 
