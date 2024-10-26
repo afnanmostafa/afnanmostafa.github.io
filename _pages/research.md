@@ -43,12 +43,18 @@ permalink: /research/
     </figure>
 </div>
 
-
 ---
 
 # Selected Undergraduate Project
 **<span style="color:#7FCEC2">Project Title:</span>** Designing and Building a Smart Wheelchair
 
 **<span style="color:#7FCEC2">Summary:</span>** This project involved designing a smart wheelchair with the goal of easing movement for individuals with physical impairments. The wheelchair, controlled with fingertip movements, includes motors for directional control, PWM for speed adjustments, and safe turning mechanisms. Future upgrades may include additional features for enhanced usability. Our intent was to create an accessible, cost-effective solution that could have a positive impact on the local market. 
+
+<div style="text-align: center; margin-top: 20px;">
+    <figure>
+        <img src="{{ site.baseurl }}/img/wheelchair.jpg" alt="SW" style="width: 80%;">
+        <figcaption>Smart Wheelchair</figcaption>
+    </figure>
+</div>
 
 **Project Videos**: [Link to Videos](https://drive.google.com/open?id=1hmubE1Iq8zFks6xkNluGDYJ0o6FOgZG1)
