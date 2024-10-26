@@ -27,10 +27,9 @@ I’m also a sports enthusiast, with Badminton as my longtime favorite. Beyond t
 
 Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the greatest of all time, INDEED.</span>
 
-
----
-layout: page
-title: About
-image: McLaren.jpg
-permalink: /about/
----
+<div style="text-align: center; margin-top: 20px;">
+    <figure>
+        <img src="{{ site.baseurl }}/img/Monolith.jpg" alt="First instance of intelligence" style="width: 50%;">
+        <figcaption>First instance of intelligence</figcaption>
+    </figure>
+</div>
