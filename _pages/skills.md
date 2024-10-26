@@ -35,4 +35,4 @@ permalink: /skills/
 
 # Human Skills
 
-A human can only be a good human by adopting humane, interpersonal skills. I strive daily to be a better person than I was yesterday.
+> A human can only be a good human by adopting humane, interpersonal skills. I strive daily to be a better person than I was yesterday.
