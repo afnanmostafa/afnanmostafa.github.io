@@ -75,7 +75,7 @@ permalink: /research/
 
 <div style="text-align: center; margin-top: 20px;">
     <figure>
-        <img src="{{ site.baseurl }}/img/wheelchair.jpg" alt="SW" style="width: 80%;">
+        <img src="{{ site.baseurl }}/img/wheelchair.jpg" alt="SW" style="width: 30%;">
         <figcaption>Smart Wheelchair</figcaption>
     </figure>
 </div>
