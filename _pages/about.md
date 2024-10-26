@@ -28,4 +28,9 @@ I’m also a sports enthusiast, with Badminton as my longtime favorite. Beyond t
 Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the greatest of all time, INDEED.</span>
 
 
+---
+layout: page
+title: About
 image: McLaren.jpg
+permalink: /about/
+---
