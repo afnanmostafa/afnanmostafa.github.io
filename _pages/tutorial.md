@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Tutorial"
+title: "Tutorials"
 image: challenger.jpg
-permalink: /tutorial/
+permalink: /tutorials/
 ---
 
 # Molecular Dynamics (MD) Tutorials (under development)
