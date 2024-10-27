@@ -28,3 +28,35 @@
 
 // 5-TRUMPS
 @import '5-trumps/helpers';
+
+.homepage-navigation {
+    text-align: center;
+    padding: 20px;
+}
+
+.homepage-navigation h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-card {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #7FCEC2;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-card:hover {
+    background-color: #66b2a5;
+}
