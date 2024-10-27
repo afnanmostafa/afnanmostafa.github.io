@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "MD Tutorial"
-image: 
+image: challenger.jpg
 permalink: /md_tutorial/
 ---
 
