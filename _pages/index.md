@@ -2,7 +2,7 @@
 layout: page
 title: About
 image: McLaren.jpg
-permalink: /about/
+permalink: /
 ---
 
 Greetings! Here's a bit about me: I'm a Formula 1 enthusiast and a proud papaya fan! I believe Ayrton Senna was the greatest motorsport driver in history. In all seriousness, I am a graduate student at the [University of Rochester](https://www.rochester.edu/). I am working on NSF-funded projects on phase transitions in materials in extreme conditions under the supervision of [Dr. Niaz Abdolrahim](https://www.hajim.rochester.edu/me/sites/abdolrahim/).
