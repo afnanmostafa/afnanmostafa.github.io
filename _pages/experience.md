@@ -5,8 +5,6 @@ image: arg.png
 permalink: /experience/
 ---
 
-# Professional Experience
-
 ### Graduate Research Assistant  
 **University of Rochester**  
 *May 2024 – Present*  
