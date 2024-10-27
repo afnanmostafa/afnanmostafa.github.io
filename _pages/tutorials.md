@@ -5,7 +5,7 @@ image: challenger.jpg
 permalink: /tutorials/
 ---
 
-# Molecular Dynamics (MD) Tutorials (under development)
+# Molecular Dynamics (MD) [under development]
 
 Here are a few tutorials for LAMMPS simulations:
 
@@ -13,6 +13,6 @@ Here are a few tutorials for LAMMPS simulations:
 - [Shock Simulation](#shock-simulation)
 - [Thermal Conductivity Analysis](#thermal-conductivity-analysis)
 
-# OVITO Tutorials (under development)
+# OVITO (under development)
 
 - placeholder
