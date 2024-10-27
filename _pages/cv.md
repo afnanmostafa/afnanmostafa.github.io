@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "CV"
+image: foliage.jpg
 permalink: /cv/
 ---
 
