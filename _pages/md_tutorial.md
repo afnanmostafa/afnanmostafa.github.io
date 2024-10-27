@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "MD Tutorial"
-permalink: /md-tutorial/
+image: 
+permalink: /md_tutorial/
 ---
 
 # Molecular Dynamics Tutorials
