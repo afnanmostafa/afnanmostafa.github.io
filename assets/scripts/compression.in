@@ -1,0 +1,233 @@
+############################################################################################
+##
+##
+##	sample LAMMPS script for 'nanowire uniaxial compression simulation' (version 2)
+##	written by Afnan Mostafa
+##
+##
+############################################################################################
+
+
+###============= simulation setup =============###
+
+units		metal
+dimension	3
+boundary	s s p
+processors 	* * *
+
+###============= neighbor list build-up =============###
+
+neighbor 	2.0 bin
+neigh_modify 	every 1 delay 0 check yes
+
+###============= timestep size in ps =============###
+
+variable 	dt equal 0.001
+timestep 	${dt}
+
+###============= temp and seed variables =============###
+
+variable 	ini_temp equal 300.0
+variable 	eq_temp equal 300.0
+variable 	st_temp equal 300.0
+
+variable 	seedno equal v_rnseed		## variable rnseed is defined in bash script
+variable 	velSeed equal 129871
+
+###============= data file =============###
+
+atom_style 	atomic
+read_data 	case1-long.data
+
+###============= interatomic potential =============###
+
+pair_style	eam/alloy
+pair_coeff	* * CuMo.eam.alloy Mo
+
+###============= stress characterization =============###
+
+compute 	1 all stress/atom NULL
+compute 	2 all reduce sum c_1[1] c_1[2] c_1[3]
+
+###============= variables =============###
+
+variable 	thickn equal "lz"
+variable        LY equal "ly"
+variable        LX equal "lx"
+variable	LZ equal "lz"
+variable 	Vol equal lx*ly*lz
+
+variable 	Devery equal 10
+variable 	Drepeat equal 500
+variable 	Dfreq equal "(v_Devery*v_Drepeat)"
+
+variable   	svm atom sqrt((((c_1[1]-c_1[2])^2+(c_1[2]-c_1[3])^2+(c_1[3]-c_1[1])^2)+6*(c_1[4]^2+c_1[5]^2+c_1[6]^2))/2)
+
+###============= per-atom info =============###
+
+dump 		mini all custom ${Dfreq} minimize.xyz id type x y z v_svm
+dump_modify 	mini sort id
+
+###============= thermo output frequency =============###
+
+thermo 		100
+
+###============= minimization =============###
+
+min_style	cg
+minimize	0 1e-15 200000 200000
+
+###============= minimization + box relax =============###
+
+min_style	cg
+fix 		1 all box/relax z 0.0
+minimize	0 1e-10 200000 200000
+unfix		1
+
+###============= second minimization =============###
+
+min_style	cg
+minimize	0 1e-20 200000 200000
+
+###============= save minimized data for future reference =============###
+
+write_data 	minimized-Case1.data
+
+###============= velocity distribution =============###
+
+velocity 	all create ${ini_temp} ${velSeed} mom yes rot yes dist gaussian units box
+
+###============= thermo output frequency =============###
+
+thermo 		1000
+
+###============= equilibration =============###
+
+fix  		NPT all npt temp ${ini_temp} ${ini_temp} $(100.0*dt) z 0.0 0.0 $(1000.0*dt) drag 2.0
+run  		200000
+unfix 		NPT
+
+fix  		NPT all npt temp ${ini_temp} ${eq_temp} $(100.0*dt) z 0.0 0.0 $(1000.0*dt) drag 2.0
+run  		200000
+unfix 		NPT
+
+fix  		NPT all npt temp ${eq_temp} ${eq_temp} $(100.0*dt) z 0.0 0.0 $(1000.0*dt) drag 2.0
+run  		500000
+unfix 		NPT
+
+fix  		NPT all npt temp ${eq_temp} ${st_temp} $(100.0*dt) z 0.0 0.0 $(1000.0*dt) drag 2.0
+run  		200000
+unfix 		NPT
+
+fix  		NPT all npt temp ${st_temp} ${st_temp} $(100.0*dt) z 0.0 0.0 $(1000.0*dt) drag 2.0
+run  		500000
+unfix 		NPT
+
+fix 		1 all nvt temp ${st_temp} ${st_temp} $(100.0*dt) drag 2.0
+run 		400000
+unfix 		1
+
+fix 		1 all nve 
+run 		200000
+unfix 		1
+
+undump 		mini
+
+###============= save equilibrated data for future reference =============###
+
+write_data 	equilibrated-Case1.data
+
+###############################################################################################
+##
+##
+##		uniaxial compression simulation starts below
+##
+##
+###############################################################################################
+
+reset_timestep 	0
+
+###============= fixes for deformation =============###
+
+fix 		1 all nvt temp ${st_temp} ${st_temp} $(dt*100) drag 1
+fix 		2 all ave/time 10 100 1000 c_2[1] c_2[2] c_2[3]
+fix 		3 all ave/time 10 100 1000 v_LX v_LY v_LZ v_Vol
+
+###============= strain rate =============###
+
+variable 	srateS equal -1.0e9			# srateS = rate per second
+variable 	sratePS equal "v_srateS / 1.0e12"	# sratePS = rate per picosecond
+
+###============= TOTAL STRAIN --> RUN  =============###
+
+variable 	totStrain equal 80 ## in %
+variable 	totsteps equal "abs((v_totStrain)/(100*v_sratePS*v_dt))"
+variable 	restartIntervals equal "v_totsteps/2"
+
+###============= output frequency =============###
+
+variable 	dumpout equal "v_totStrain*100"
+variable 	thermoout equal 1000
+
+variable 	Nevery equal v_totStrain
+variable 	Nrepeat equal 100
+variable 	Nfreq equal "(v_Nevery*v_Nrepeat)"
+
+###============= per-atom info =============###
+
+dump 		compress all custom ${dumpout} compression.xyz id type x y z v_svm
+dump_modify 	compress sort id
+
+###============= deform cell =============###
+
+fix 		4 all deform 1 z erate ${sratePS} units box remap x
+
+run 		1000
+
+###============= variables =============###
+
+variable        L0 equal ${LZ}
+variable 	CorVol equal f_3[4]
+variable 	ConvoFac equal 1/1.0e4
+
+variable 	sigmaxx equal "-1*f_2[1]*v_ConvoFac/v_CorVol"
+variable 	sigmayy equal "-1*f_2[2]*v_ConvoFac/v_CorVol"
+variable 	sigmazz equal "-1*f_2[3]*v_ConvoFac/v_CorVol"	
+
+variable 	strain equal "abs(v_sratePS*v_dt*step)"
+variable 	strainConv equal "abs((lz-v_L0)/v_L0)"
+
+variable 	p2 equal -pxx/10000
+variable 	p3 equal -pyy/10000
+variable 	p4 equal -pzz/10000
+variable 	p11 equal -pxy/10000 	
+variable 	p13 equal -pyz/10000
+variable 	p12 equal -pxz/10000
+
+###============= extras: global hydrostatic + von Mises stress =============###
+
+variable 	fm equal (v_p2+v_p3+v_p4)/3 								##### Hydrostatic stress
+variable 	fv equal sqrt((v_p2-v_p3)^2+(v_p3-v_p4)^2+(v_p4-v_p2)^2+6*(v_p11^2+v_p12^2+v_p13^2)/2) 	######Von Mises Stress
+
+###============= thermodynamic info and style =============###
+
+thermo 		${thermoout}
+thermo_style 	custom step temp v_strain v_strainConv v_sigmaxx v_sigmayy v_sigmazz press pe ke lx ly v_CorVol vol 
+
+###============= output stress to a file =============###
+
+print 		${seedno}
+
+variable 	f string compression_stress_profile_${seedno}.txt		## unique identifier in case of failed-and-restarted simulation, prevents overlapping
+
+fix 		print_sp all print ${thermoout} "${strain} ${sigmaxx} ${sigmayy} ${sigmazz} ${fm} ${fv} ${strainConv}" file $f screen no title "#strain stress_x stress_y stress_z hydrostatic_stress vonmisses_stress strain_conventional"
+
+###============= run =============###
+
+restart		${restartIntervals} tmp.restart
+
+run		${totsteps}
+
+write_restart 	rest.restart
+
+print 		"compression DONE"
