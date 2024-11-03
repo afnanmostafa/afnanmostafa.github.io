@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Tutorials"
+title: "Codes/Scripts"
 image: challenger.jpg
 permalink: /tutorials/
 ---
 
-# Molecular Dynamics (MD) [under development]
+# Molecular Dynamics (MD)
 
 Here are a few sample LAMMPS scripts for:
 
