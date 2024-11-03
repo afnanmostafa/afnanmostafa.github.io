@@ -15,15 +15,19 @@ Here are a few sample LAMMPS scripts for:
 
 ## Uniaxial Deformation
 
-#### Uniaxial compression script
+#### Uniaxial compression
 - [Download uniaxial compression script]( {{ site.baseurl }}/assets/scripts/compression.in )
 
-#### Uniaxial tension script
+#### Uniaxial tension
 - [Download uniaxial tension script]( {{ site.baseurl }}/assets/scripts/tension.in )
+
+---
 
 ## Shock Simulation
 This tutorial provides a LAMMPS script for shock simulation.
 - [Download Shock Simulation Script]( {{ site.baseurl }}/assets/scripts/shock_simulation.in )
+
+---
 
 ## Thermal Conductivity Analysis
 #### Muller-Plathe Method (reverse non-equilibrium molecular dynamics)
@@ -32,13 +36,22 @@ This tutorial provides a LAMMPS script for shock simulation.
 #### Green-Kubo Method (equilibrium molecular dynamics)
 - [Download EMD Script]( {{ site.baseurl }}/assets/scripts/emd.in )
 
+---
+---
+
 # OVITO 
 
 - Coming soon!
 
+---
+---
+
 # Bash 
 
 - Coming soon!
+
+---
+---
 
 # Gnuplot 
 
