@@ -32,6 +32,14 @@ This tutorial provides a LAMMPS script for shock simulation.
 #### Green-Kubo Method (equilibrium molecular dynamics)
 - [Download EMD Script]( {{ site.baseurl }}/assets/scripts/emd.in )
 
-# OVITO (under development)
+# OVITO 
 
-- placeholder
+- Coming soon!
+
+# Bash 
+
+- Coming soon!
+
+# Gnuplot 
+
+- Coming soon!
