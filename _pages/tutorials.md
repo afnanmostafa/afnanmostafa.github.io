@@ -7,11 +7,11 @@ permalink: /tutorials/
 
 # Molecular Dynamics (MD) [under development]
 
-Here are a few tutorials for LAMMPS simulations:
+Here are a few sample LAMMPS scripts for:
 
-- [Uniaxial Deformation](#uniaxial-deformation)
-- [Shock Simulation](#shock-simulation)
-- [Thermal Conductivity Analysis](#thermal-conductivity-analysis)
+- Uniaxial Deformation
+- Shock Simulation
+- Thermal Conductivity Analysis
 
 ## Uniaxial Deformation
 This tutorial provides a LAMMPS script for uniaxial deformation.
@@ -24,9 +24,10 @@ This tutorial provides a LAMMPS script for shock simulation.
 - [Download Shock Simulation Script]( {{ site.baseurl }}/assets/scripts/shock_simulation.in )
 
 ## Thermal Conductivity Analysis
-This tutorial provides a LAMMPS script for thermal conductivity analysis.
+#### Muller-Plathe Method (reverse non-equilibrium molecular dynamics)
 
-- [Download Thermal Conductivity Script]( {{ site.baseurl }}/assets/scripts/thermal_conductivity.in )
+
+- [Download rNEMD Script]( {{ site.baseurl }}/assets/scripts/rnemd.in )
 
 # OVITO (under development)
 
