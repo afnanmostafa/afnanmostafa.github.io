@@ -32,7 +32,7 @@ Orcid: https://orcid.org/0000-0002-0371-926X
 
 #-------------------------------
 # Google Analytics
-#google-analytics: # Add your identifier. For example UA-99631805-1.
+google-analytics: G-RL76ZCW9SJ # Add your identifier. For example UA-99631805-1.
 
 #-------------------------------
 # Build settings
