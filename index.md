@@ -5,11 +5,11 @@ image: McLaren.jpg
 permalink: /
 ---
 
-Greetings! Here's a bit about me: I'm a Formula 1 enthusiast and a proud papaya fan! I believe Ayrton Senna was the greatest motorsport driver in history. In all seriousness, I am a graduate student at the [University of Rochester](https://www.rochester.edu/). I am working on NSF-funded projects on phase transitions in materials in extreme conditions under the supervision of [Dr. Niaz Abdolrahim](https://www.hajim.rochester.edu/me/sites/abdolrahim/).
+Greetings! Thank you for visiting. I hope it's not a complete waste of your time. Here's a bit about me: I'm an avid Formula 1 enthusiast and a proud papaya (McLaren) fan! Ayrton Senna, in my view, remains the greatest motorsport driver in history. On a more academic note, I'm a graduate student at the [University of Rochester](https://www.rochester.edu/), working on NSF-funded research exploring phase transitions in materials under extreme conditions under the guidance of [Dr. Niaz Abdolrahim](https://www.hajim.rochester.edu/me/sites/abdolrahim/).
 
-I recently completed my MS at the [University of Massachusetts Amherst (UMass Amherst)](https://www.umass.edu/), where I was fortunate to contribute to projects funded by the [Army Research Laboratory](https://arl.devcom.army.mil/), focused on developing graphene-nanodiamond composites with enhanced mechanical and thermal properties under the guidance of [Dr. Ashwin Ramasubramaniam](https://scholar.google.com/citations?user=m_vW2OUAAAAJ&hl=en) and [Dr. Dimitrios Maroudas](https://scholar.google.com/citations?user=djdYARAAAAAJ&hl=en).
+I recently earned my MS from the [University of Massachusetts Amherst (UMass Amherst)](https://www.umass.edu/),  where I had the privilege of working on [Army Research Laboratory](https://arl.devcom.army.mil/)-funded projects aimed at developing graphene-nanodiamond composites with enhanced mechanical and thermal properties. This work was conducted under the mentorship of [Dr. Ashwin Ramasubramaniam](https://scholar.google.com/citations?user=m_vW2OUAAAAJ&hl=en) and [Dr. Dimitrios Maroudas](https://scholar.google.com/citations?user=djdYARAAAAAJ&hl=en).
 
-I earned my B.Sc. at [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/web/) in October 2018. Afterward, I gained practical experience as an HVAC Design Coordinator and Project Supervisor at MEP Design Studio. 
+I completed my B.Sc. at [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/web/)in October 2018, which laid the foundation for my career in engineering. Following my degree, I worked as an HVAC Design Coordinator and Project Supervisor at MEP Design Studio, where I gained practical experience in the field. 
 
 {% highlight markdown %}
 Hobbies: Learning new software tools and reflecting on how fortunate we are as humans to have come this far!
