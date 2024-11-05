@@ -43,6 +43,7 @@ This tutorial provides a LAMMPS script for shock simulation.
 
 #### Calculate atomic level von Mises stress from per-atom stress tensors
 - [Download OVITO file (binary file)]( {{ site.baseurl }}/assets/scripts/get_atomit_vonMises_stress.ovmod )
+
 ---
 ---
 
