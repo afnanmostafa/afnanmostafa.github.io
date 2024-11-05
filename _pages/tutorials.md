@@ -50,11 +50,11 @@ This tutorial provides a LAMMPS script for shock simulation.
 
 #### Edit repeating entries in a LAMMPS restart file to use as a continuation of previous file
 - [Download bash script]( {{ site.baseurl }}/assets/scripts/edit_restart_file_index_for_plotting.sh )
-#### for sample files & worked-out example --> [See GitHub repo](https://github.com/afnanmostafa/LAMMPS-processing/tree/main/src/edit_certain_repeating_entries_only) 
+- for sample files & worked-out example --> [See GitHub repo](https://github.com/afnanmostafa/LAMMPS-processing/tree/main/src/edit_certain_repeating_entries_only) 
 
 #### Remove velocities (or any other unwanted properties) from xyz or data file
 - [Download bash script]( {{ site.baseurl }}/assets/scripts/edit_restart_file_index_for_plotting.sh )
-#### for sample files & worked-out example --> [See GitHub repo](https://github.com/afnanmostafa/LAMMPS-processing/tree/main/src/remove_velocities_from_lammpsFile) 
+- for sample files & worked-out example --> [See GitHub repo](https://github.com/afnanmostafa/LAMMPS-processing/tree/main/src/remove_velocities_from_lammpsFile) 
 
 ---
 ---
