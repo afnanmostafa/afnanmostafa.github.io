@@ -17,9 +17,15 @@ Here are a few sample LAMMPS scripts for:
 
 #### Uniaxial compression
 - [Download uniaxial compression script]( {{ site.baseurl }}/assets/scripts/compression.in )
+- for more info --> [Check out our CMS article](https://doi.org/10.1016/j.commatsci.2024.113273) 
 
 #### Uniaxial tension
-- [Download uniaxial tension script]( {{ site.baseurl }}/assets/scripts/tension.in )
+- [Download uniaxial tension script]( {{ site.baseurl }}/assets/scripts/tension.in ) [coming soon]
+- for more info --> [Check out our CMS article](https://doi.org/10.1016/j.commatsci.2024.113273) 
+
+#### Simple (edge) shear
+- [Download shear script]( {{ site.baseurl }}/assets/scripts/shear.in ) [coming soon]
+- for more info --> [Check out our JAP article](https://doi.org/10.1063/5.0168767) 
 
 ---
 
@@ -32,9 +38,11 @@ This tutorial provides a LAMMPS script for shock simulation.
 ## Thermal Conductivity Analysis
 #### Muller-Plathe Method (reverse non-equilibrium molecular dynamics)
 - [Download rNEMD script]( {{ site.baseurl }}/assets/scripts/rnemd.in )
+- for more info --> [Check out our APL letter](https://doi.org/10.1063/5.0140769) 
 
 #### Green-Kubo Method (equilibrium molecular dynamics)
 - [Download EMD script]( {{ site.baseurl }}/assets/scripts/emd.in )
+- for more info --> [Check out our APL letter](https://doi.org/10.1063/5.0140769) 
 
 ---
 ---
@@ -42,7 +50,7 @@ This tutorial provides a LAMMPS script for shock simulation.
 # OVITO 
 
 #### Calculate atomic level von Mises stress from per-atom stress tensors
-- [Download OVITO file (binary file)]( {{ site.baseurl }}/assets/scripts/get_atomit_vonMises_stress.ovmod )
+- [Download OVITO file (binary file, open inside OVITO as a new modifier)]( {{ site.baseurl }}/assets/scripts/get_atomit_vonMises_stress.ovmod )
 
 ---
 ---
