@@ -25,16 +25,16 @@ Here are a few sample LAMMPS scripts for:
 
 ## Shock Simulation
 This tutorial provides a LAMMPS script for shock simulation.
-- [Download Shock Simulation Script]( {{ site.baseurl }}/assets/scripts/shock_simulation.in )
+- [Download shock simulation script]( {{ site.baseurl }}/assets/scripts/shock_simulation.in )
 
 ---
 
 ## Thermal Conductivity Analysis
 #### Muller-Plathe Method (reverse non-equilibrium molecular dynamics)
-- [Download rNEMD Script]( {{ site.baseurl }}/assets/scripts/rnemd.in )
+- [Download rNEMD script]( {{ site.baseurl }}/assets/scripts/rnemd.in )
 
 #### Green-Kubo Method (equilibrium molecular dynamics)
-- [Download EMD Script]( {{ site.baseurl }}/assets/scripts/emd.in )
+- [Download EMD script]( {{ site.baseurl }}/assets/scripts/emd.in )
 
 ---
 ---
@@ -49,9 +49,12 @@ This tutorial provides a LAMMPS script for shock simulation.
 # Bash 
 
 #### Edit repeating entries in a LAMMPS restart file to use as a continuation of previous file
-- [Download bash Script]( {{ site.baseurl }}/assets/scripts/edit_restart_file_index_for_plotting.sh )
+- [Download bash script]( {{ site.baseurl }}/assets/scripts/edit_restart_file_index_for_plotting.sh )
 #### for sample files & worked-out example --> [See GitHub repo](https://github.com/afnanmostafa/LAMMPS-processing/tree/main/src/edit_certain_repeating_entries_only) 
 
+#### Remove velocities (or any other unwanted properties) from xyz or data file
+- [Download bash script]( {{ site.baseurl }}/assets/scripts/edit_restart_file_index_for_plotting.sh )
+#### for sample files & worked-out example --> [See GitHub repo](https://github.com/afnanmostafa/LAMMPS-processing/tree/main/src/remove_velocities_from_lammpsFile) 
 
 ---
 ---
