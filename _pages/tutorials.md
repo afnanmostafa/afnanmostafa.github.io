@@ -17,15 +17,15 @@ Here are a few sample LAMMPS scripts for:
 
 #### Uniaxial compression
 - [Download uniaxial compression script]( {{ site.baseurl }}/assets/scripts/compression.in )
-- for more info --> [Check out our CMS article](https://doi.org/10.1016/j.commatsci.2024.113273) 
+- for more info --> [<span style="color:#FF9900">Check out our CMS article</span>](https://doi.org/10.1016/j.commatsci.2024.113273) 
 
 #### Uniaxial tension
 - [Download uniaxial tension script]( {{ site.baseurl }}/assets/scripts/tension.in ) [coming soon]
-- for more info --> [Check out our CMS article](https://doi.org/10.1016/j.commatsci.2024.113273) 
+- for more info --> [<span style="color:#FF9900">Check out our CMS article</span>](https://doi.org/10.1016/j.commatsci.2024.113273) 
 
 #### Simple (edge) shear
 - [Download shear script]( {{ site.baseurl }}/assets/scripts/shear.in ) [coming soon]
-- for more info --> [Check out our JAP article](https://doi.org/10.1063/5.0168767) 
+- for more info --> [<span style="color:#FF9900">Check out our JAP article</span>](https://doi.org/10.1063/5.0168767) 
 
 ---
 
@@ -38,11 +38,11 @@ This tutorial provides a LAMMPS script for shock simulation.
 ## Thermal Conductivity Analysis
 #### Muller-Plathe Method (reverse non-equilibrium molecular dynamics)
 - [Download rNEMD script]( {{ site.baseurl }}/assets/scripts/rnemd.in )
-- for more info --> [Check out our APL letter](https://doi.org/10.1063/5.0140769) 
+- for more info --> [<span style="color:#FF9900">Check out our APL letter</span>](https://doi.org/10.1063/5.0140769) 
 
 #### Green-Kubo Method (equilibrium molecular dynamics)
 - [Download EMD script]( {{ site.baseurl }}/assets/scripts/emd.in )
-- for more info --> [Check out our APL letter](https://doi.org/10.1063/5.0140769) 
+- for more info --> [<span style="color:#FF9900">Check out our APL letter</span>](https://doi.org/10.1063/5.0140769) 
 
 ---
 ---
@@ -70,4 +70,5 @@ This tutorial provides a LAMMPS script for shock simulation.
 
 # Gnuplot 
 
-- Coming soon!
+#### Automating axes decor 
+- [Download GnuPlot script]( {{ site.baseurl }}/assets/scripts/fix_axes.gp ) [<span style="color:#FF9900">[view code]</span>]({{ site.baseurl }}/assets/scripts/fix_axes.txt )
