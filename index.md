@@ -35,3 +35,7 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
         <figcaption>First instance of intelligence</figcaption>
     </figure>
 </div>
+
+---
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fafnanmostafa%2Fafnanmostafa.github.io.git&count_bg=%231E68E5&title_bg=%23555555&icon=github.svg&icon_color=%2350DAF1&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
