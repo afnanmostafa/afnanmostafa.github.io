@@ -5,12 +5,12 @@ image: comet.jpg
 permalink: /research/
 ---
 
-- Nanoscale materials
-- Phase transition in metals
-- Materials under extreme conditions
 - Atomistic modeling and simulations
-- Dynamic Compression
-- Computational Materials Science
+- Nanoscale materials
+- Phase transitions in metals
+- Materials under extreme conditions
+- Dynamic compression simulations
+- Computational materials science
 - Machine learning in materials science
 - Finite element modeling
 
@@ -24,7 +24,7 @@ permalink: /research/
 ---
 
 # Graduate (MS) Thesis
-**<span style="color:#7FCEC2">Title:</span>** Thermal Conductivity and Mechanical Properties of Interlayer-Bonded Graphene Bilayers [Link](https://scholarworks.umass.edu/masters_theses_2/1337/)  
+**<span style="color:#7FCEC2">Title:</span>** Thermal Conductivity and Mechanical Properties of Interlayer-Bonded Graphene Bilayers [(Link)](https://scholarworks.umass.edu/masters_theses_2/1337/)  
 **<span style="color:#7FCEC2">Supervisors:</span>** Dr. Ashwin Ramasubramaniam & Dr. Dimitrios Maroudas  
 
 **<span style="color:#7FCEC2">Summary:</span>** Graphene, an allotrope of carbon, demonstrates exceptional properties that can be enhanced through structural modifications. This thesis presents molecular dynamics studies to understand the thermomechanical response of interlayer-bonded graphene bilayers. Key findings reveal that controlling interlayer C-C bond density can precisely tune the in-plane thermal conductivity of these superstructures, which has implications for thermal management. Additionally, we observe a brittle-to-ductile transition in IB-TBG structures under shear deformation, contrasting with RD-IBG sheets which exhibit brittle failure. The study contributes significantly to understanding graphene-based mechanical metamaterials.
