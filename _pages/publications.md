@@ -7,11 +7,11 @@ permalink: /publications/
 
 # Publications
 
+- Li F., **Mostafa, A.**, Zimmerman J., Liang Z., Klinger L., Yeom J., Janczak-Rusch J., Abdolrahim N., Rabkin E., “Solid state de-wetting of co-sputtered thin Mo-Cu films accompanied by phase separation,” *Acta Materialia*, 120889, 2025. [Link](https://www.sciencedirect.com/science/article/pii/S1359645425001818)
 - **Mostafa, A.**, Vu, L., Guo, Z., Shargh, A. K., Dey, A., Askari, H., Abdolrahim, N., “Phase-transformation assisted twinning in Molybdenum nanowires,” *Computational Materials Science*, 2024. [Link](https://www.sciencedirect.com/science/article/pii/S0927025624004944)
 - **Mostafa, A.**, Weerasinghe, A., Ramasubramaniam, A., Maroudas, D., “Response of interlayer-bonded bilayer graphene to shear deformation,” *Journal of Applied Physics*, vol. 134, no. 15, 2023. [Link](https://pubs.aip.org/aip/jap/article/134/15/154301/2917100/Response-of-interlayer-bonded-bilayer-graphene-to)
 - **Mostafa, A.**, Ramasubramaniam, A., Maroudas, D., “Thermal conductivity of 2D diamond superstructures in interlayer-bonded twisted bilayer graphene,” *Applied Physics Letters*, vol. 122, no. 13, 2023. [Link](https://pubs.aip.org/aip/apl/article/122/13/133101/2880946/Thermal-conductivity-of-2D-diamond-superstructures)
 - **Mostafa, A.**, Motalab, M., Faiyaz, A. R., Paul, R., “Uniaxial and cyclic stress-strain behavior of lead-free solders at nanoscale,” *AIP Conference Proceedings*, AIP Publishing, vol. 2324, 2021. [Link](https://pubs.aip.org/aip/acp/article-abstract/2324/1/030024/1027371/Uniaxial-and-cyclic-stress-strain-behavior-of-lead?redirectedFrom=fulltext)
-- Li F., **Mostafa, A.**, Zimmerman J., Liang Z., Klinger L., Yeom J., Janczak-Rusch J., Abdolrahim N., Rabkin E., “Solid state de-wetting of co-sputtered thin Mo-Cu films accompanied by phase separation,” 2024 (Under Preparation).
 - Qian, S., **Mostafa, A.**, Abdolrahim, N., “Orientation-dependent phase transformation in Molybdenum nanowires under uniaxial and bi-axial bending deformation,” 2024 (under preparation).
 
 ---
