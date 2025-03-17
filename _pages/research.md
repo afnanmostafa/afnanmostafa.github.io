@@ -9,6 +9,7 @@ permalink: /research/
 - Phase transition in metals
 - Materials under extreme conditions
 - Atomistic modeling and simulations
+- Dynamic Compression
 - Computational Materials Science
 - Machine learning in materials science
 - Finite element modeling
