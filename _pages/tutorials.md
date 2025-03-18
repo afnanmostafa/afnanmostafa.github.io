@@ -52,6 +52,13 @@ This tutorial provides a LAMMPS script for shock simulation.
 - [View shock simulation pseudocode theory]( {{ site.baseurl }}/assets/scripts/Shock_NEMD_movingpiston.png )
 - [Download shock simulation pseudocode]( {{ site.baseurl }}/assets/scripts/MD-pseudocode--shock.in )
 
+Hugoniot vs. Rayleigh: 
+<video width="80%" controls>
+    <source src="{{ site.baseurl }}/assets/videos/Hugoniot.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
 ---
 
 ## Thermal Conductivity Analysis
