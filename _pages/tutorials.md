@@ -76,6 +76,7 @@ This tutorial provides a LAMMPS script for shock simulation.
 ## Modifying EAM interatomic potential (modifying LAMMPS C++ source codes)
 
 - [View how-to]( {{ site.baseurl }}/assets/Images/Tuning-Pair-Potential-EAM.png )
+- [Check out our Acta Materialia paper for details](https://doi.org/10.1016/j.actamat.2025.120889)[section 4.2 in main text and Figs. S3 & S4 of the supplementary file]
 - [Download the modified codes] (coming soon)
 
 ---
