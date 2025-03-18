@@ -9,9 +9,7 @@ permalink: /tutorials/
 # Solving Finite Element Code in MATLAB
 
 - [Main script]( {{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m ) [<span style="color:#FF9900">[view code]</span>]({{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt )
-
 - [Function: Gauss Integral for Q4 element in iso-parametric space]( {{ site.baseurl }}/assets/scripts/FEM/GaussQuadQ4.m ) [<span style="color:#FF9900">[view code]</span>]({{ site.baseurl }}/assets/scripts/FEM/GaussQuadQ4.txt )
-
 - Find all the codes in [<span style="color:#FF9900">my GitHub repo</span>](https://github.com/afnanmostafa/Finite-Elements-ME254/tree/main/Final%20Project) 
 
 ---
