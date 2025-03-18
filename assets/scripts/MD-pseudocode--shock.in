@@ -1,0 +1,56 @@
+##############################################################################
+##
+##
+##	sample MD pseudocode for shock compression simulation
+##	written by Afnan Mostafa (let me know if you need a fully-fledged working script)
+##
+##
+##############################################################################
+
+# initialize simulation parameters
+set units (metal), 3D periodic boundary conditions
+set timestep (dt = 0.001 ps or finer dt for more precise simulation)
+
+# load atomic structure
+read atomic data
+replicate system if needed (e.g., 2 x 1 x 30)
+
+# define potential
+set potential using pot_file.data
+
+# compute per-atom energy and stress
+calculate potential energy, atomic stress, von Mises stress, etc.
+
+# energy minimization 
+perform conjugate gradient minimization
+perform box relaxation, couple xyz dimensions
+save minimized structure
+
+# initialize velocities (e.g., 300 K)
+assign Gaussian velocity distribution
+
+# equilibration phases
+run NPT ensemble (50,000 steps)
+run NVT ensemble (50,000 steps)
+run NVE ensemble (50,000 steps)
+save equilibrated system
+
+# shock simulation setup
+change z-boundary (shock propagation dir) to shrink-wrapped
+
+# define piston and bulk regions
+region piston block INF INF INF INF INF ${piston_zhi} units box
+region bulk block INF INF INF INF ${piston_zhi} INF units box
+set piston velocity (e.g., 4.0 km/s)
+fix piston atoms (zero forces)
+
+# perform shock simulation (NVE)
+run NVE ensemble, apply piston velocity
+record chunk-based profiles (density, temperature, pressure, velocity, etc.)
+
+# output and thermodynamics
+periodically print thermodynamics
+save snapshots and output log files
+
+# run shock simulation (N steps)
+run N

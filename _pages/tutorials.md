@@ -37,9 +37,11 @@ Here are a few sample LAMMPS scripts for:
     <br>
     <button type="submit">Submit</button>
 </form>
+
 ---
 This tutorial provides a LAMMPS script for shock simulation.
-- [Download shock simulation pseudocode]( {{ site.baseurl }}/assets/scripts/Shock_NEMD_movingpiston.png )
+- [View shock simulation pseudocode theory]( {{ site.baseurl }}/assets/scripts/Shock_NEMD_movingpiston.png )
+- [Download shock simulation pseudocode]( {{ site.baseurl }}/assets/scripts/MD-pseudocode--shock.in )
 
 ---
 
