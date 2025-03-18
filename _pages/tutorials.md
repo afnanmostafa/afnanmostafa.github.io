@@ -31,7 +31,7 @@ Here are a few sample LAMMPS scripts for:
 
 ## Shock Simulation
 
-Food for thought: Why do we simulate uniaxial compression/tension in MD codes with a strain rate of 10^8 or 10^9 s^(-1) and how come we do not observe any shock waves? 
+<span style="color:#ffd733">Food for thought: Why do we simulate uniaxial compression/tension in MD codes with a strain rate of 10<sup>8</sup> or 10<sup>9</sup> s<sup>-1</sup> and how come we do not observe any shock waves?
 
 <h4><span style="color:#FF9900">Share your thoughts anonymously:</span></h4>
 <form action="https://formspree.io/f/movevpbr" method="POST">
