@@ -28,6 +28,7 @@ Here are a few sample LAMMPS scripts for:
 - for more info --> [<span style="color:#FF9900">Check out our JAP article</span>](https://doi.org/10.1063/5.0168767) 
 
 ---
+---
 
 ## Shock Simulation
 
@@ -48,6 +49,7 @@ Here are a few sample LAMMPS scripts for:
 </form>
 
 ---
+
 This tutorial provides a LAMMPS script for shock simulation.
 - [View shock simulation pseudocode theory]( {{ site.baseurl }}/assets/scripts/Shock_NEMD_movingpiston.png )
 - [Download shock simulation pseudocode]( {{ site.baseurl }}/assets/scripts/MD-pseudocode--shock.in )
@@ -58,7 +60,7 @@ This tutorial provides a LAMMPS script for shock simulation.
     Your browser does not support the video tag.
 </video>
 
-
+---
 ---
 
 ## Thermal Conductivity Analysis
