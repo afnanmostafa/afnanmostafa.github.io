@@ -92,6 +92,9 @@ This tutorial provides a LAMMPS script for shock simulation.
 #### Automating axes decor 
 - [Download GnuPlot script]( {{ site.baseurl }}/assets/scripts/fix_axes.gp ) [<span style="color:#FF9900">[view code]</span>]({{ site.baseurl }}/assets/scripts/fix_axes.txt )
 
+---
+---
+
 # ASME IMECE 2024 Poster Symposium
 
 - [View poster]( {{ site.baseurl }}/assets/2024 IMECE NSF Poster_Research ID--150414--AfnanMostafa.pdf )
