@@ -31,8 +31,17 @@ Here are a few sample LAMMPS scripts for:
 
 ## Shock Simulation
 
-<span style="color:#ffd733">Food for thought:</span> Why do we simulate uniaxial compression/tension in MD codes with a strain rate of 10<sup>8</sup> or 10<sup>9</sup> s<sup>-1</sup> and how come we do not even observe any shock waves?
+<span style="color:#ffd733">Food for thought 1:</span> Why do we simulate uniaxial compression/tension in MD codes with a strain rate of 10<sup>8</sup> or 10<sup>9</sup> s<sup>-1</sup> and how come we do not even observe any shock waves?
 <form action="https://formspree.io/f/movevpbr" method="POST">
+    <textarea name="response" rows="4" placeholder="Write your response here anonymously..."></textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+---
+
+<span style="color:#ffd733">Food for thought 2:</span> Does Poisson’s ratio influence shock compression? Specifically, does the lateral dimension expand in response to compression along the shock direction?
+<form action="https://formspree.io/f/xanenlzj" method="POST">
     <textarea name="response" rows="4" placeholder="Write your response here anonymously..."></textarea>
     <br>
     <button type="submit">Submit</button>
