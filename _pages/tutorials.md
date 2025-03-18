@@ -128,3 +128,4 @@ This tutorial provides a LAMMPS script for shock simulation.
 - [View poster]( {{ site.baseurl }}/assets/2024 IMECE NSF Poster_Research ID--150414--AfnanMostafa.pdf )
 
 
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fafnanmostafa.github.io%2Ftutorials%2F&count_bg=%2379C83D&title_bg=%23555555&icon=verizon.svg&icon_color=%23DAE1B1&title=lurker&edge_flat=false"/></a>
