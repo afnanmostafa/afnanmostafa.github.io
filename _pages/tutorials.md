@@ -73,6 +73,14 @@ This tutorial provides a LAMMPS script for shock simulation.
 ---
 ---
 
+## Modifying EAM interatomic potential (modifying LAMMPS C++ source codes)
+
+- [View how-to]( {{ site.baseurl }}/assets/Images/Tuning-Pair-Potential-EAM.png )
+- [Download the modified codes] (coming soon)
+
+---
+---
+
 ## Thermal Conductivity Analysis
 #### Muller-Plathe Method (reverse non-equilibrium molecular dynamics)
 - [Download rNEMD script]( {{ site.baseurl }}/assets/scripts/rnemd.in )
