@@ -39,7 +39,7 @@ permalink: /research/
 ---
 
 # Undergraduate Thesis
-**<span style="color:#7FCEC2">Title:</span>** Uniaxial and Cyclic Stress-Strain Behavior of Lead-Free Solders at Nano-scale [Link](https://pubs.aip.org/aip/acp/article-abstract/2324/1/030024/1027371/Uniaxial-and-cyclic-stress-strain-behavior-of-lead?redirectedFrom=fulltext)  
+**<span style="color:#7FCEC2">Title:</span>** Uniaxial and Cyclic Stress-Strain Behavior of Lead-Free Solders at Nano-scale [(Link)](https://pubs.aip.org/aip/acp/article-abstract/2324/1/030024/1027371/Uniaxial-and-cyclic-stress-strain-behavior-of-lead?redirectedFrom=fulltext)  
 **<span style="color:#7FCEC2">Supervisor:</span>** Dr. Mohammad Abdul Motalab  
 
 **<span style="color:#7FCEC2">Summary:</span>** This research examines the cyclic and uniaxial stress-strain behavior of lead-free solders (SAC alloy) at the nanoscale level using LAMMPS simulations. Key parameters like temperature, strain limits, and alloy composition were analyzed for their effects on the material’s stress-strain behavior. Findings indicate that increasing temperature or lowering strain rates results in increased plastic strain range and decreased peak stress. This study provides insights into damage accumulation in solder joints, with implications for improving the reliability of electrical assemblies.
