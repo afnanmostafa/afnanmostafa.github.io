@@ -38,23 +38,6 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
 
 ---
 
-<div style="text-align: center; margin-top: 40px;">
-  <p style="font-size: 1.2em; color: #555;">
-    <strong>👁 Lurkers:</strong> 
-    <span id="counter" style="font-weight: bold; color: #FF6600; opacity: 0.5;">...</span>
-  </p>
-</div>
+<!-- 'Seeyoufarm' closed permanently, so using a new one with a guessed starting point -->
 
-<script>
-  fetch('https://api.countapi.xyz/hit/afnanmostafa.github.io/lurkers')
-    .then(res => res.json())
-    .then(data => {
-      const counter = document.getElementById("counter");
-      counter.innerText = data.value.toLocaleString();
-      counter.style.opacity = "1";
-    })
-    .catch(err => {
-      console.error('Counter error:', err);
-      document.getElementById("counter").innerText = 'N/A';
-    });
-</script>
+<a href="https://hits.sh/afnanmostafa.github.io/"><img alt="Hits" src="https://hits.sh/afnanmostafa.github.io.svg?view=today-total&style=plastic&label=lurkers&extraCount=500"/></a>
