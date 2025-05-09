@@ -10,10 +10,7 @@ permalink: /tutorials/
 
 <ul>
   <li>
-    <span style="color: #1abc9c;">Main script:</span>
-    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m" style="text-decoration: none;">
-      <span style="color: #1abc9c;">(download)</span>
-    </a>
+    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m" style="color: #1abc9c;">Main script:</a>
     <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt" style="color:#FF9900; margin-left: 4px;">[view code]</a>
     <a href="https://hits.sh/afnanmostafa.github.io/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt/">
       <img 
