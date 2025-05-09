@@ -40,4 +40,18 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
 
 <!-- 'Seeyoufarm' closed permanently, so using a new one with a guessed starting point -->
 
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://hits.sh/afnanmostafa.github.io/">
+    <img 
+      alt="Hits" 
+      src="https://hits.sh/afnanmostafa.github.io.svg?view=today-total&style=plastic&label=lurkers%20(today%2Ftotal)&extraCount=500"
+    />
+  </a>
+  <br>
+  <small style="color: #999; font-style: italic;">
+    (Note: Former counter service 'SeeYouFarm' is now permanently closed.)
+  </small>
+</div>
+
+
 <a href="https://hits.sh/afnanmostafa.github.io/"><img alt="Hits" src="https://hits.sh/afnanmostafa.github.io.svg?view=today-total&style=plastic&label=lurkers&extraCount=500"/></a>
