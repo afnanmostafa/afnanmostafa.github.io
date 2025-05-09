@@ -10,13 +10,16 @@ permalink: /tutorials/
 
 <ul>
   <li>
-    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m">Main script:</a>
-    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt" style="color:#FF9900; margin-left: 10px;">[view code]</a>
+    <span style="color: #1abc9c;">Main script:</span>
+    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m" style="text-decoration: none;">
+      <span style="color: #1abc9c;">(download)</span>
+    </a>
+    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt" style="color:#FF9900; margin-left: 4px;">[view code]</a>
     <a href="https://hits.sh/afnanmostafa.github.io/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt/">
       <img 
         alt="Hits" 
         src="https://hits.sh/afnanmostafa.github.io/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt.svg?style=flat-square&label=clicks&extraCount=100&color=007ec6" 
-        style="margin-left: 8px; vertical-align: middle;"
+        style="margin-left: 6px; vertical-align: middle;"
       />
     </a>
   </li>
