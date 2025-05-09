@@ -38,4 +38,18 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
 
 ---
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fafnanmostafa.github.io&count_bg=%232725CD&title_bg=%23555555&icon=github.svg&icon_color=%234EE1C2&title=lurkers&edge_flat=false)](https://hits.seeyoufarm.com)
+<div style="text-align: center; margin-top: 40px;">
+  <p><strong>Lurkers:</strong> <span id="counter">Loading...</span></p>
+</div>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/afnanmostafa.github.io/homepage')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("counter").innerText = data.value;
+    })
+    .catch(err => {
+      console.error('Counter error:', err);
+      document.getElementById("counter").innerText = 'N/A';
+    });
+</script>
