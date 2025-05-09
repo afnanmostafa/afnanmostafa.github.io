@@ -8,19 +8,7 @@ permalink: /tutorials/
 
 # Solving Finite Element Code in MATLAB
 
-<ul>
-  <li>
-    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m" style="color: #1abc9c;">Main script:</a>
-    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt" style="color:#FF9900; margin-left: 4px;">[view code]</a>
-    <a href="https://hits.sh/afnanmostafa.github.io/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt/">
-      <img 
-        alt="Hits" 
-        src="https://hits.sh/afnanmostafa.github.io/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt.svg?style=flat-square&label=clicks&extraCount=100&color=007ec6" 
-        style="margin-left: 6px; vertical-align: middle;"
-      />
-    </a>
-  </li>
-</ul>
+- [Main script]( {{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m ) [<span style="color:#FF9900">[view code]</span>]({{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt )
 - [Function: Gauss Integral for Q4 element in iso-parametric space]( {{ site.baseurl }}/assets/scripts/FEM/GaussQuadQ4.m ) [<span style="color:#FF9900">[view code]</span>]({{ site.baseurl }}/assets/scripts/FEM/GaussQuadQ4.txt )
 - Find all the codes in [<span style="color:#FF9900">my GitHub repo</span>](https://github.com/afnanmostafa/Finite-Elements-ME254/tree/main/Final%20Project) 
 
