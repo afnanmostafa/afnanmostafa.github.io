@@ -39,14 +39,19 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
 ---
 
 <div style="text-align: center; margin-top: 40px;">
-  <p><strong>Lurkers:</strong> <span id="counter">Loading...</span></p>
+  <p style="font-size: 1.2em; color: #555;">
+    <strong>👁 Lurkers:</strong> 
+    <span id="counter" style="font-weight: bold; color: #FF6600; opacity: 0.5;">...</span>
+  </p>
 </div>
 
 <script>
-  fetch('https://api.countapi.xyz/hit/afnanmostafa.github.io/homepage')
+  fetch('https://api.countapi.xyz/hit/afnanmostafa.github.io/lurkers')
     .then(res => res.json())
     .then(data => {
-      document.getElementById("counter").innerText = data.value;
+      const counter = document.getElementById("counter");
+      counter.innerText = data.value.toLocaleString();
+      counter.style.opacity = "1";
     })
     .catch(err => {
       console.error('Counter error:', err);
