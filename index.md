@@ -52,6 +52,3 @@ Oh, before you go, repeat after me: <span style="color:#FF9900">Messi is the gre
     (Note: Former counter service 'SeeYouFarm' is now permanently closed.)
   </small>
 </div>
-
-
-<a href="https://hits.sh/afnanmostafa.github.io/"><img alt="Hits" src="https://hits.sh/afnanmostafa.github.io.svg?view=today-total&style=plastic&label=lurkers&extraCount=500"/></a>

@@ -128,4 +128,19 @@ This tutorial provides a LAMMPS script for shock simulation.
 - [View poster]( {{ site.baseurl }}/assets/2024 IMECE NSF Poster_Research ID--150414--AfnanMostafa.pdf )
 
 
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fafnanmostafa.github.io%2Ftutorials%2F&count_bg=%2379C83D&title_bg=%23555555&icon=verizon.svg&icon_color=%23DAE1B1&title=lurker&edge_flat=false"/></a>
+<!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fafnanmostafa.github.io%2Ftutorials%2F&count_bg=%2379C83D&title_bg=%23555555&icon=verizon.svg&icon_color=%23DAE1B1&title=lurker&edge_flat=false"/></a> -->
+
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://hits.sh/afnanmostafa.github.io/tutorials/">
+    <img 
+      alt="Hits" 
+      src="https://hits.sh/afnanmostafa.github.io/tutorials.svg?view=today-total&style=plastic&label=geeky%20lurkers%20(today%2Ftotal)&extraCount=500&color=126bf5"
+    />
+  </a>
+  <br>
+  <small style="color: #888; font-style: italic;">
+    P.S. 'SeeYouFarm' counter is discontinued :(!
+  </small>
+</div>
+
