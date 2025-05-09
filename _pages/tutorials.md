@@ -10,9 +10,8 @@ permalink: /tutorials/
 
 <ul>
   <li>
-    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m">Main script</a>
+    <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.m">Main script:</a>
     <a href="{{ site.baseurl }}/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt" style="color:#FF9900; margin-left: 10px;">[view code]</a>
-
     <a href="https://hits.sh/afnanmostafa.github.io/assets/scripts/FEM/main_script_FEM_AfnanMostafa.txt/">
       <img 
         alt="Hits" 
