@@ -15,7 +15,7 @@ permalink: /tutorials/
 ---
 ---
 
-Building LAMMPS with GPU or KOKKOS package:
+# Building LAMMPS with GPU or KOKKOS package:
 - [README]( {{ site.baseurl }}/assets/scripts/LAMMPS_KOKKOS_GPU_BUILD_GUIDE.md )
 
 ---
