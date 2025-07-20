@@ -15,6 +15,12 @@ permalink: /tutorials/
 ---
 ---
 
+Building LAMMPS with GPU or KOKKOS package:
+- [README]( {{ site.baseurl }}/assets/scripts/LAMMPS_KOKKOS_GPU_BUILD_GUIDE.md )
+
+---
+---
+
 # Molecular Dynamics (MD)
 
 Here are a few sample LAMMPS scripts for:
