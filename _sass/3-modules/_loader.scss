@@ -7,48 +7,104 @@
   bottom: 0;
   z-index: 999;
   overflow: hidden;
-  background: $black;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(0, 113, 227, .12), transparent 34%),
+    linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 100%);
+  transition: opacity .35s ease, visibility .35s ease;
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .loader {
   position: absolute;
   top: 50%;
   left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-width: 220px;
+  padding: 28px 32px;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .76);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .12);
+  backdrop-filter: saturate(180%) blur(18px);
   transform: translate(-50%, -50%);
-  padding: 10px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 21px;
-  letter-spacing: .5em;
-  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
   font-weight: 700;
-  color: #fff;
-  background: $black;
+  color: #1d1d1f;
+}
 
-  span {
-    color: #fff;
-    mix-blend-mode: difference;
-  }
+.loader-mark {
+  position: relative;
+  width: 76px;
+  height: 34px;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 100%;
-    background: #fff;
-    animation: animate 3s linear infinite;
+    left: 50%;
+    top: 50%;
+    width: 76px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 113, 227, .5), transparent);
+    transform: translate(-50%, -50%);
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #0071e3;
+    box-shadow: 0 0 18px rgba(0, 113, 227, .28);
+    transform: translateY(-50%);
+    animation: loader-pulse 1.4s ease-in-out infinite;
+
+    &:nth-child(1) {
+      left: 0;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      left: 33px;
+      animation-delay: .16s;
+    }
+
+    &:nth-child(3) {
+      right: 0;
+      animation-delay: .32s;
+    }
   }
 }
 
-@keyframes animate {
-  0% {
-    left: 0;
+.loader-text {
+  color: #6e6e73;
+}
+
+@keyframes loader-pulse {
+  0%,
+  100% {
+    opacity: .38;
+    transform: translateY(-50%) scale(.78);
   }
   50% {
-    left: calc(100% - 70px);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.08);
   }
-  100% {
-    left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-mark span {
+    animation: none;
+    opacity: .8;
   }
 }
