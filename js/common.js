@@ -138,6 +138,73 @@ $(function() {
     }).scroll();
   }
 
+  /* =======================
+  // Scroll Motion
+  ======================= */
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $header = $(".header");
+  var $progress = $(".scroll-progress");
+  var $hero = $(".page-image");
+
+  function updateScrollEffects() {
+    var scrollTop = $(window).scrollTop();
+    var docHeight = $(document).height() - $(window).height();
+    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    document.documentElement.style.setProperty("--scroll-progress", progress + "%");
+    $header.toggleClass("is-scrolled", scrollTop > 8);
+
+    if (!prefersReducedMotion && $hero.length) {
+      document.documentElement.style.setProperty("--hero-shift", Math.min(scrollTop * 0.08, 26) + "px");
+    }
+  }
+
+  function setupScrollReveal() {
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      $(".scroll-reveal").addClass("reveal-in");
+      return;
+    }
+
+    $("body").addClass("motion-ready");
+
+    var revealTargets = $(".page-head, .page-body > h1, .page-body > h2, .page-body > h3, .page-body > p, .page-body > ul, .page-body > ol, .page-body > blockquote, .page-body > .highlighter-rouge, .page-body figure, .page-body img, .nav-card, .download-btn");
+
+    revealTargets.each(function(index) {
+      var $target = $(this);
+      var typeClass = "";
+
+      if ($target.is("img, figure")) {
+        typeClass = " reveal-scale";
+      } else if ($target.is("ul, ol, blockquote")) {
+        typeClass = index % 2 === 0 ? " reveal-left" : " reveal-right";
+      }
+
+      $target
+        .addClass("scroll-reveal" + typeClass)
+        .css("--reveal-delay", Math.min(index % 5, 4) * 55 + "ms");
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: "0px 0px -8% 0px",
+      threshold: 0.12
+    });
+
+    $(".scroll-reveal").each(function() {
+      observer.observe(this);
+    });
+  }
+
+  setupScrollReveal();
+  updateScrollEffects();
+  $(window).on("scroll resize", updateScrollEffects);
+
 
   /* =======================
   // Responsive Videos
