@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" role="banner">
   <div class="container">
     <div class="row">
       <div class="col col-12">
@@ -7,25 +7,25 @@
             <a href="{{ site.baseurl }}/" class="logo-text">Afnan Mostafa</a>
           </div>
 
-          <nav class="nav-menu">
-            <i class="menu-close ion ion-ios-close"></i>
+          <nav class="nav-menu" aria-label="Primary navigation">
+            <i class="menu-close ion ion-ios-close" role="button" tabindex="0" aria-label="Close menu"></i>
             <ul class="menu-list">
-              <li class="menu-item"><a href="{{ site.baseurl }}/" class="menu-link">About</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/academia" class="menu-link">Academia</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/research" class="menu-link">Research</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/skills" class="menu-link">Skills</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/publications" class="menu-link">Publications</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/experience" class="menu-link">Experience</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/accolades" class="menu-link">Accolades</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/write-ups" class="menu-link">Write-ups</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/cv" class="menu-link">CV</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/tutorials" class="menu-link">Tutorials</a></li>
-              <li class="menu-item"><a href="{{ site.baseurl }}/contact" class="menu-link">Contact</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/" class="menu-link{% if page.url == '/' %} active{% endif %}">About</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/academia" class="menu-link{% if page.url == '/academia/' %} active{% endif %}">Academia</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/research" class="menu-link{% if page.url == '/research/' %} active{% endif %}">Research</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/skills" class="menu-link{% if page.url == '/skills/' %} active{% endif %}">Skills</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/publications" class="menu-link{% if page.url == '/publications/' %} active{% endif %}">Publications</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/experience" class="menu-link{% if page.url == '/experience/' %} active{% endif %}">Experience</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/accolades" class="menu-link{% if page.url == '/accolades/' %} active{% endif %}">Accolades</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/write-ups" class="menu-link{% if page.url == '/write-ups/' %} active{% endif %}">Write-ups</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/cv" class="menu-link{% if page.url == '/cv/' %} active{% endif %}">CV</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/tutorials" class="menu-link{% if page.url == '/tutorials/' %} active{% endif %}">Codes</a></li>
+              <li class="menu-item"><a href="{{ site.baseurl }}/contact" class="menu-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
             </ul>
           </nav>
           <div class="nav-buttons">
-            <i class="menu-button d-hide ion ion-ios-menu"></i>
-            <i class="search-button ion ion-ios-search"></i>
+            <i class="menu-button d-hide ion ion-ios-menu" role="button" tabindex="0" aria-label="Open menu"></i>
+            <i class="search-button ion ion-ios-search" role="button" tabindex="0" aria-label="Open search"></i>
           </div>
         </div>
       </div>
@@ -34,9 +34,9 @@
   
   <div class="search">
     <div class="search-box">
-      <i class="search-close-button ion ion-ios-close"></i>
-      <label for="js-search-input" class="screen-reader-text"></label>
-      <input type="text" id="js-search-input" class="search-text" autocomplete="off" placeholder="Search Something...">
+      <i class="search-close-button ion ion-ios-close" role="button" tabindex="0" aria-label="Close search"></i>
+      <label for="js-search-input" class="screen-reader-text">Search the site</label>
+      <input type="text" id="js-search-input" class="search-text" autocomplete="off" placeholder="Search the site">
       <ol id="js-results-container" class="search-results-list"></ol>
     </div>
   </div>

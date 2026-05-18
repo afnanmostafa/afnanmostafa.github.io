@@ -23,33 +23,78 @@ $(function() {
     openMenu();
   });
 
+  $menuOpenButton.on("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openMenu();
+    }
+  });
+
   $menuCloseButton.on("click", function() {
     closeMenu();
+  });
+
+  $menuCloseButton.on("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      closeMenu();
+    }
   });
 
   $searchOpenButton.on("click", function() {
     openSearch();
   });
 
+  $searchOpenButton.on("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openSearch();
+    }
+  });
+
   $searchCloseButton.on("click", function() {
     closeSearch();
+  });
+
+  $searchCloseButton.on("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      closeSearch();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeMenu();
+      closeSearch();
+    }
   });
 
 
   function openMenu() {
     $navMenu.addClass("active");
+    $menuCloseButton.focus();
   }
 
   function closeMenu() {
+    var wasActive = $navMenu.hasClass("active");
     $navMenu.removeClass("active");
+    if (wasActive) {
+      $menuOpenButton.focus();
+    }
   }
 
   function openSearch() {
     $search.addClass("active");
+    $("#js-search-input").focus();
   }
 
   function closeSearch() {
+    var wasActive = $search.hasClass("active");
     $search.removeClass("active");
+    if (wasActive) {
+      $searchOpenButton.focus();
+    }
   }
 
 
