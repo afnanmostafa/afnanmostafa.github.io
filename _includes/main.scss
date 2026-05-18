@@ -79,16 +79,16 @@
 
 /* Visual refresh and usability polish */
 :root {
-  --surface: #252a32;
-  --surface-strong: #1b2028;
-  --surface-soft: #303744;
-  --text-strong: #f4f7fb;
-  --text-muted: #aab6c7;
-  --accent: #2fd0b3;
-  --accent-warm: #f3bd5b;
-  --accent-rose: #e9857c;
-  --line-soft: rgba(255, 255, 255, .12);
-  --shadow-soft: 0 18px 50px rgba(0, 0, 0, .28);
+  --surface: #f5f5f7;
+  --surface-strong: #ffffff;
+  --surface-soft: #f1f3f6;
+  --text-strong: #1d1d1f;
+  --text-muted: #6e6e73;
+  --accent: #0071e3;
+  --accent-warm: #2997ff;
+  --accent-rose: #8e8e93;
+  --line-soft: rgba(0, 0, 0, .1);
+  --shadow-soft: 0 18px 55px rgba(0, 0, 0, .1);
   --motion-fast: 180ms;
   --motion-medium: 420ms;
   --motion-slow: 760ms;
@@ -100,9 +100,9 @@ html {
 
 body {
   background:
-    linear-gradient(135deg, rgba(47, 208, 179, .08), transparent 36%),
-    linear-gradient(315deg, rgba(243, 189, 91, .07), transparent 34%),
-    #20252d;
+    radial-gradient(circle at 50% -10%, rgba(0, 113, 227, .12), transparent 34%),
+    linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 54%, #eef0f4 100%);
+  color: #1d1d1f;
 }
 
 body,
@@ -110,6 +110,7 @@ button,
 input,
 textarea {
   letter-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .scroll-progress {
@@ -119,8 +120,8 @@ textarea {
   z-index: 80;
   width: var(--scroll-progress, 0%);
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-warm), var(--accent-rose));
-  box-shadow: 0 0 18px rgba(47, 208, 179, .45);
+  background: linear-gradient(90deg, #0071e3, #2997ff);
+  box-shadow: 0 0 18px rgba(0, 113, 227, .22);
   transition: width var(--motion-fast) ease-out;
 }
 
@@ -150,16 +151,16 @@ textarea {
   top: 0;
   z-index: 20;
   margin-bottom: 34px;
-  background: rgba(16, 16, 16, .82);
+  background: rgba(251, 251, 253, .78);
   border-bottom: 1px solid var(--line-soft);
-  backdrop-filter: blur(16px);
+  backdrop-filter: saturate(180%) blur(18px);
   transition: background var(--motion-medium) ease, box-shadow var(--motion-medium) ease, border-color var(--motion-medium) ease;
 }
 
 .header.is-scrolled {
-  background: rgba(16, 16, 16, .94);
-  border-bottom-color: rgba(255, 255, 255, .18);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+  background: rgba(251, 251, 253, .92);
+  border-bottom-color: rgba(0, 0, 0, .13);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .07);
 }
 
 .header,
@@ -187,6 +188,20 @@ textarea {
   outline: none;
 }
 
+.nav-menu .menu-list .menu-link,
+.nav-buttons i.ion,
+.menu-close,
+.search-close-button {
+  color: var(--text-strong);
+}
+
+.nav-menu .menu-link:hover,
+.nav-buttons i.ion:hover,
+.menu-close:hover,
+.search-close-button:hover {
+  color: var(--accent);
+}
+
 .nav-buttons i.ion:focus,
 .menu-close:focus,
 .search-close-button:focus,
@@ -209,13 +224,14 @@ textarea {
 }
 
 .nav-menu .menu-list .menu-link.active {
-  color: var(--surface-strong);
-  background: var(--accent-warm);
+  color: #fff;
+  background: var(--accent);
 }
 
 .search,
 .nav-menu {
-  background: rgba(27, 32, 40, .98);
+  background: rgba(251, 251, 253, .96);
+  backdrop-filter: saturate(180%) blur(18px);
 }
 
 .search-box .search-text {
@@ -223,7 +239,7 @@ textarea {
   border: 1px solid var(--line-soft);
   text-transform: none;
   letter-spacing: 0;
-  background: var(--surface-soft);
+  background: rgba(255, 255, 255, .86);
   color: var(--text-strong);
 }
 
@@ -253,15 +269,17 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, .38));
+  background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, .12));
 }
 
 .page-content,
 .widget {
   border: 1px solid var(--line-soft);
   border-radius: 8px;
-  background: rgba(31, 37, 46, .94);
+  background: rgba(255, 255, 255, .82);
   box-shadow: var(--shadow-soft);
+  color: #1d1d1f;
+  backdrop-filter: saturate(160%) blur(18px);
   transition: transform var(--motion-medium) ease, box-shadow var(--motion-medium) ease, border-color var(--motion-medium) ease;
 }
 
@@ -272,8 +290,8 @@ textarea {
 
 .page-content:hover,
 .widget:hover {
-  border-color: rgba(255, 255, 255, .2);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, .34);
+  border-color: rgba(0, 0, 0, .14);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .13);
   transform: translateY(-2px);
 }
 
@@ -302,7 +320,7 @@ textarea {
 }
 
 .page-body {
-  color: #d8e0ee;
+  color: #1d1d1f;
   font-size: 17px;
   line-height: 1.8;
 }
@@ -333,9 +351,9 @@ textarea {
 }
 
 .page-body a {
-  color: #69e0cc;
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: rgba(105, 224, 204, .45);
+  text-decoration-color: rgba(0, 113, 227, .36);
   text-underline-offset: 3px;
 }
 
@@ -592,8 +610,8 @@ code {
 }
 
 blockquote {
-  border-left-color: var(--accent-warm);
-  background: rgba(255, 255, 255, .04);
+  border-left-color: var(--accent);
+  background: rgba(0, 113, 227, .06);
   border-radius: 0 8px 8px 0;
 }
 
@@ -606,13 +624,13 @@ blockquote {
 }
 
 .nav-card {
-  color: var(--surface-strong);
+  color: #fff;
   background: var(--accent);
 }
 
 .nav-card:hover,
 .download-btn:hover {
-  color: var(--surface-strong);
+  color: #fff;
   background: var(--accent-warm);
   transform: translateY(-1px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, .24);
@@ -686,7 +704,33 @@ blockquote {
 
 .footer {
   border-top: 1px solid var(--line-soft);
-  background: rgba(16, 16, 16, .88);
+  background: rgba(245, 245, 247, .92);
+  color: var(--text-muted);
+}
+
+.footer a,
+.footer-bottom .copyright p,
+.footer-bottom .copyright p a,
+.footer-bottom .footer-social ul li a {
+  color: var(--text-muted);
+}
+
+.footer a:hover,
+.footer-bottom .copyright p a:hover,
+.footer-bottom .footer-social ul li a:hover {
+  color: var(--accent);
+}
+
+.footer-top .top {
+  border-color: rgba(0, 0, 0, .08);
+  background: rgba(255, 255, 255, .76);
+  color: var(--text-strong);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+.footer-top .top:hover {
+  color: #fff;
+  background: var(--accent);
 }
 
 .footer-bottom {
