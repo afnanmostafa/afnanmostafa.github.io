@@ -1,10 +1,43 @@
 <div class="preloader">
   <div class="loader">
+    {% assign loader_text = "Loading portfolio" %}
+    {% case page.url %}
+      {% when "/" %}
+        {% assign loader_text = "Opening profile" %}
+      {% when "/about/" %}
+        {% assign loader_text = "Opening profile" %}
+      {% when "/academia/" %}
+        {% assign loader_text = "Loading academia" %}
+      {% when "/research/" %}
+        {% assign loader_text = "Mapping research" %}
+      {% when "/skills/" %}
+        {% assign loader_text = "Organizing skills" %}
+      {% when "/publications/" %}
+        {% assign loader_text = "Gathering publications" %}
+      {% when "/experience/" %}
+        {% assign loader_text = "Loading experience" %}
+      {% when "/accolades/" %}
+        {% assign loader_text = "Collecting accolades" %}
+      {% when "/write-ups/" %}
+        {% assign loader_text = "Opening write-ups" %}
+      {% when "/cv/" %}
+        {% assign loader_text = "Preparing CV" %}
+      {% when "/tutorials/" %}
+        {% assign loader_text = "Loading code notes" %}
+      {% when "/contact/" %}
+        {% assign loader_text = "Opening contact" %}
+      {% when "/styleguide/" %}
+        {% assign loader_text = "Loading style guide" %}
+      {% else %}
+        {% if page.title %}
+          {% assign loader_text = "Loading " | append: page.title %}
+        {% endif %}
+    {% endcase %}
     <div class="loader-mark" aria-hidden="true">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <span class="loader-text">Loading portfolio</span>
+    <span class="loader-text">{{ loader_text }}</span>
   </div>
 </div> <!-- /.loader -->
