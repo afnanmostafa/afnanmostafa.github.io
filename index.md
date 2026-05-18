@@ -8,10 +8,7 @@ permalink: /
   <canvas class="web-intro-canvas" aria-hidden="true"></canvas>
 
   <div class="web-intro-content">
-    <p class="web-intro-kicker">Computational materials science</p>
     <h1 id="web-intro-title">Afnan Mostafa</h1>
-    <p class="web-intro-copy">Atomistic simulations, phase transformations, nanoscale materials, and research tools arranged as a living map.</p>
-    <a class="web-intro-primary" href="{{ site.baseurl }}/about">Enter profile</a>
   </div>
 
   <nav class="web-node-map" aria-label="Featured site sections">
