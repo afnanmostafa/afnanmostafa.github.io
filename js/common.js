@@ -205,6 +205,130 @@ $(function() {
   updateScrollEffects();
   $(window).on("scroll resize", updateScrollEffects);
 
+  /* =======================
+  // Spider Web Intro
+  ======================= */
+  function setupSpiderWebIntro() {
+    var intro = document.querySelector(".web-intro");
+    var canvas = document.querySelector(".web-intro-canvas");
+
+    if (!intro || !canvas) {
+      return;
+    }
+
+    var context = canvas.getContext("2d");
+    var nodes = Array.prototype.slice.call(intro.querySelectorAll(".web-node"));
+    var particles = [];
+    var animationFrame;
+
+    function resizeCanvas() {
+      var rect = intro.getBoundingClientRect();
+      var ratio = window.devicePixelRatio || 1;
+
+      canvas.width = rect.width * ratio;
+      canvas.height = rect.height * ratio;
+      canvas.style.width = rect.width + "px";
+      canvas.style.height = rect.height + "px";
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function getNodePoints() {
+      var introRect = intro.getBoundingClientRect();
+
+      return nodes.map(function(node) {
+        var rect = node.getBoundingClientRect();
+
+        return {
+          x: rect.left - introRect.left + rect.width / 2,
+          y: rect.top - introRect.top + rect.height / 2,
+          size: rect.width,
+          core: node.classList.contains("is-core")
+        };
+      });
+    }
+
+    function createParticles() {
+      particles = [];
+
+      for (var i = 0; i < 34; i += 1) {
+        particles.push({
+          x: Math.random() * intro.offsetWidth,
+          y: Math.random() * intro.offsetHeight,
+          radius: 1 + Math.random() * 2.2,
+          speed: .18 + Math.random() * .28,
+          drift: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    function drawLine(a, b, opacity, width) {
+      context.beginPath();
+      context.moveTo(a.x, a.y);
+      context.lineTo(b.x, b.y);
+      context.strokeStyle = "rgba(159, 236, 225, " + opacity + ")";
+      context.lineWidth = width;
+      context.stroke();
+    }
+
+    function drawWeb() {
+      var width = intro.offsetWidth;
+      var height = intro.offsetHeight;
+      var points = getNodePoints();
+      var core = points.filter(function(point) { return point.core; })[0] || points[0];
+
+      context.clearRect(0, 0, width, height);
+
+      points.forEach(function(point, index) {
+        if (core && point !== core) {
+          drawLine(core, point, .34, 1.2);
+        }
+
+        points.slice(index + 1).forEach(function(other) {
+          var dx = point.x - other.x;
+          var dy = point.y - other.y;
+          var distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < Math.min(width, 620)) {
+            drawLine(point, other, Math.max(.06, .22 - distance / 2600), .8);
+          }
+        });
+      });
+
+      particles.forEach(function(particle) {
+        particle.y -= particle.speed;
+        particle.x += Math.sin(particle.drift) * .15;
+        particle.drift += .012;
+
+        if (particle.y < -8) {
+          particle.y = height + 8;
+          particle.x = Math.random() * width;
+        }
+
+        context.beginPath();
+        context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        context.fillStyle = "rgba(255, 255, 255, .34)";
+        context.fill();
+      });
+
+      if (!prefersReducedMotion) {
+        animationFrame = window.requestAnimationFrame(drawWeb);
+      }
+    }
+
+    resizeCanvas();
+    createParticles();
+    drawWeb();
+
+    $(window).on("resize", function() {
+      window.cancelAnimationFrame(animationFrame);
+      resizeCanvas();
+      createParticles();
+      drawWeb();
+    });
+  }
+
+  setupSpiderWebIntro();
+
 
   /* =======================
   // Responsive Videos

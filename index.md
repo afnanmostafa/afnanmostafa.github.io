@@ -5,6 +5,42 @@ image: McLaren.jpg
 permalink: /
 ---
 
+<section class="web-intro" aria-labelledby="web-intro-title">
+  <canvas class="web-intro-canvas" aria-hidden="true"></canvas>
+  <div class="web-intro-content">
+    <p class="web-intro-kicker">Computational materials science portfolio</p>
+    <h1 id="web-intro-title">Afnan Mostafa</h1>
+    <p class="web-intro-copy">Research, simulations, publications, code notes, and the occasional F1-flavored side quest.</p>
+  </div>
+
+  <nav class="web-node-map" aria-label="Featured site sections">
+    <a class="web-node node-about is-core" href="{{ site.baseurl }}/" data-node-label="About">
+      <span>About</span>
+    </a>
+    <a class="web-node node-research" href="{{ site.baseurl }}/research" data-node-label="Research">
+      <span>Research</span>
+    </a>
+    <a class="web-node node-publications" href="{{ site.baseurl }}/publications" data-node-label="Publications">
+      <span>Publications</span>
+    </a>
+    <a class="web-node node-experience" href="{{ site.baseurl }}/experience" data-node-label="Experience">
+      <span>Experience</span>
+    </a>
+    <a class="web-node node-skills" href="{{ site.baseurl }}/skills" data-node-label="Skills">
+      <span>Skills</span>
+    </a>
+    <a class="web-node node-codes" href="{{ site.baseurl }}/tutorials" data-node-label="Codes">
+      <span>Codes</span>
+    </a>
+    <a class="web-node node-cv" href="{{ site.baseurl }}/cv" data-node-label="CV">
+      <span>CV</span>
+    </a>
+    <a class="web-node node-contact" href="{{ site.baseurl }}/contact" data-node-label="Contact">
+      <span>Contact</span>
+    </a>
+  </nav>
+</section>
+
 Greetings! Thank you for visiting. I hope it's not a complete waste of your time. Here's a bit about me: I'm an avid Formula 1 enthusiast and a proud papaya (McLaren) fan! Ayrton Senna, in my view, remains the greatest motorsport driver in history. On a more academic note, I'm a graduate student at the [University of Rochester](https://www.rochester.edu/), working on NSF-funded research exploring phase transitions in materials under extreme conditions under the guidance of [Dr. Niaz Abdolrahim](https://www.hajim.rochester.edu/me/sites/abdolrahim/).
 
 I recently earned my MS from the [University of Massachusetts Amherst (UMass Amherst)](https://www.umass.edu/), where I had the privilege of working on [U.S. Army Research Laboratory](https://arl.devcom.army.mil/)-funded projects aimed at developing graphene-nanodiamond composites with enhanced mechanical and thermal properties. This work was conducted under the mentorship of [Dr. Ashwin Ramasubramaniam](https://scholar.google.com/citations?user=m_vW2OUAAAAJ&hl=en) and [Dr. Dimitrios Maroudas](https://scholar.google.com/citations?user=djdYARAAAAAJ&hl=en).
