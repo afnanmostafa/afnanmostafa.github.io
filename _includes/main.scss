@@ -609,6 +609,29 @@ code {
   border-radius: 8px;
 }
 
+.highlight,
+.highlighter-rouge .highlight,
+.page-body pre {
+  border: 1px solid rgba(0, 0, 0, .08);
+  background: rgba(255, 255, 255, .88);
+  color: var(--text-strong);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.page-body pre,
+.page-body pre code,
+.highlight pre,
+.highlight code {
+  color: var(--text-strong);
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: var(--text-muted);
+}
+
 blockquote {
   border-left-color: var(--accent);
   background: rgba(0, 113, 227, .06);
