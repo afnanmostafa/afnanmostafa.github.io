@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIFA World Cup 2026 Fixture Calendar</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #16231d;
+      --muted: #66736a;
+      --paper: #f7f8f3;
+      --panel: #ffffff;
+      --panel-soft: #eef5ee;
+      --line: #d7ded6;
+      --grass: #087a43;
+      --grass-dark: #06522f;
+      --sun: #f4b942;
+      --coral: #d95c42;
+      --blue: #235d8f;
+      --shadow: 0 18px 42px rgba(25, 44, 35, 0.13);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(8, 122, 67, 0.09), rgba(247, 248, 243, 0) 26rem),
+        var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.45;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .shell {
+      max-width: 1680px;
+      margin: 0 auto;
+      padding: 22px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 330px;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(90deg, rgba(3, 24, 14, 0.88) 0%, rgba(3, 24, 14, 0.58) 46%, rgba(3, 24, 14, 0.2) 100%),
+        url("world-cup-stadium-hero.png") center / cover no-repeat;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-inner {
+      width: min(920px, 100%);
+      padding: 34px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: #d7f1dc;
+    }
+
+    .eyebrow::before {
+      width: 36px;
+      height: 3px;
+      background: var(--sun);
+      content: "";
+      border-radius: 999px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.25rem, 5.8vw, 5.6rem);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      min-width: 112px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.36rem;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 2px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 390px);
+      gap: 22px;
+      align-items: start;
+      margin-top: 22px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      gap: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(22, 35, 29, 0.09);
+      backdrop-filter: blur(12px);
+    }
+
+    .toolbar-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search {
+      flex: 1 1 280px;
+      min-width: 220px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: var(--radius);
+    }
+
+    .search label {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .search input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .mode-buttons,
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .mode,
+    .chip,
+    .team-filter,
+    .print-button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .mode,
+    .print-button {
+      padding: 7px 12px;
+      font-weight: 800;
+    }
+
+    .chip,
+    .team-filter {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 10px;
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+
+    .chip::before,
+    .team-filter::before,
+    .team-dot {
+      width: 10px;
+      height: 10px;
+      flex: 0 0 10px;
+      border-radius: 50%;
+      background: var(--team, var(--grass));
+      content: "";
+    }
+
+    .mode:hover,
+    .chip:hover,
+    .team-filter:hover,
+    .print-button:hover {
+      transform: translateY(-1px);
+      border-color: var(--grass);
+      box-shadow: 0 9px 18px rgba(8, 122, 67, 0.12);
+    }
+
+    .mode.is-active,
+    .chip.is-active,
+    .team-filter.is-active {
+      color: #fff;
+      border-color: var(--grass-dark);
+      background: var(--grass-dark);
+    }
+
+    .chip.is-active::before,
+    .team-filter.is-active::before {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7);
+    }
+
+    .months {
+      display: grid;
+      gap: 18px;
+    }
+
+    .month {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .month-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: end;
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #ffffff, #edf6ef);
+    }
+
+    .month-title h2 {
+      margin: 0;
+      font-size: 1.35rem;
+    }
+
+    .month-title p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .weekdays,
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+
+    .weekdays span {
+      padding: 10px 8px;
+      color: var(--muted);
+      background: #f2f5ef;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .day {
+      min-height: 176px;
+      padding: 9px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .day:nth-child(7n) {
+      border-right: 0;
+    }
+
+    .day.is-outside {
+      background: #f0f3ed;
+    }
+
+    .day-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.79rem;
+      font-weight: 800;
+    }
+
+    .day-number {
+      display: inline-grid;
+      place-items: center;
+      width: 27px;
+      height: 27px;
+      color: var(--ink);
+      background: var(--panel-soft);
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .day.has-watch .day-number {
+      color: #fff;
+      background: var(--grass-dark);
+    }
+
+    .match-stack {
+      display: grid;
+      gap: 7px;
+    }
+
+    .fixture-card {
+      position: relative;
+      display: grid;
+      gap: 5px;
+      padding: 8px 8px 8px 11px;
+      border: 1px solid #e1e7df;
+      border-left: 4px solid var(--accent, #b8c3ba);
+      background: #fbfcf8;
+      border-radius: var(--radius);
+      min-width: 0;
+    }
+
+    .fixture-card.is-watch {
+      background: linear-gradient(90deg, rgba(8, 122, 67, 0.09), #fff 58%);
+      border-color: rgba(8, 122, 67, 0.26);
+    }
+
+    .fixture-card.is-knockout {
+      border-left-color: var(--coral);
+      background: linear-gradient(90deg, rgba(217, 92, 66, 0.08), #fff 58%);
+    }
+
+    .fixture-top,
+    .fixture-meta {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 0;
+    }
+
+    .time {
+      color: var(--grass-dark);
+      font-size: 0.78rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .match-no {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .teams {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+      font-size: 0.84rem;
+      font-weight: 850;
+      line-height: 1.18;
+    }
+
+    .teams span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .team-line {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .team-line.is-top {
+      color: var(--top-color, var(--grass-dark));
+    }
+
+    .versus {
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .fixture-meta {
+      color: var(--muted);
+      font-size: 0.68rem;
+      line-height: 1.25;
+    }
+
+    .fixture-meta span {
+      overflow-wrap: anywhere;
+    }
+
+    .empty-day {
+      color: #98a59b;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding-top: 8px;
+    }
+
+    .side {
+      position: sticky;
+      top: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .side-panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .side-head {
+      padding: 17px;
+      background: linear-gradient(135deg, #ffffff, #edf6ef);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-head h2 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .side-head p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .team-list {
+      display: grid;
+      gap: 10px;
+      max-height: calc(100vh - 220px);
+      overflow: auto;
+      padding: 12px;
+    }
+
+    .team-card {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .team-card summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 11px 12px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 900;
+    }
+
+    .team-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .team-name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .group-tag {
+      color: #fff;
+      background: var(--grass-dark);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 0.68rem;
+      font-weight: 900;
+    }
+
+    .team-matches {
+      display: grid;
+      gap: 8px;
+      padding: 0 12px 12px;
+    }
+
+    .team-match {
+      display: grid;
+      gap: 3px;
+      padding: 10px;
+      background: #f7faf5;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--team, var(--grass));
+    }
+
+    .team-match strong {
+      font-size: 0.86rem;
+    }
+
+    .team-match span {
+      color: var(--muted);
+      font-size: 0.77rem;
+    }
+
+    .source-note {
+      color: var(--muted);
+      font-size: 0.78rem;
+      padding: 13px 17px 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .source-note a {
+      color: var(--grass-dark);
+      font-weight: 800;
+    }
+
+    .no-results {
+      display: none;
+      padding: 24px;
+      border: 1px dashed var(--line);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.66);
+      border-radius: var(--radius);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .no-results.is-visible {
+      display: block;
+    }
+
+    @media (max-width: 1180px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side {
+        position: static;
+      }
+
+      .team-list {
+        max-height: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .shell {
+        padding: 12px;
+      }
+
+      .hero {
+        min-height: 300px;
+      }
+
+      .hero-inner {
+        padding: 24px;
+      }
+
+      .toolbar {
+        position: static;
+      }
+
+      .month {
+        overflow-x: auto;
+      }
+
+      .weekdays,
+      .calendar-grid {
+        min-width: 780px;
+      }
+
+      .day {
+        min-height: 160px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        min-height: 340px;
+      }
+
+      .hero-inner {
+        padding: 20px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .search {
+        flex-basis: 100%;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .shell {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .toolbar,
+      .side {
+        display: none;
+      }
+
+      .layout {
+        display: block;
+      }
+
+      .month {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .day {
+        min-height: 142px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <p class="eyebrow">Fixture calendar</p>
+        <h1 id="page-title">FIFA World Cup 2026</h1>
+        <p class="hero-copy">A calendar-format fixture board for every match from 11 June to 19 July, with Argentina, Brazil, Spain, Germany, France, and other headline teams pulled forward in the layout.</p>
+        <div class="hero-stats" aria-label="Tournament summary">
+          <div class="stat"><strong>104</strong><span>Matches</span></div>
+          <div class="stat"><strong>48</strong><span>Teams</span></div>
+          <div class="stat"><strong>16</strong><span>Host cities</span></div>
+          <div class="stat"><strong id="watchCount">0</strong><span>Watchlist games</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section aria-label="Fixture calendar">
+        <div class="toolbar" aria-label="Calendar controls">
+          <div class="toolbar-row">
+            <div class="search">
+              <label for="searchBox">Search</label>
+              <input id="searchBox" type="search" placeholder="Team, venue, city, round">
+            </div>
+            <div class="mode-buttons" aria-label="Fixture display mode">
+              <button class="mode is-active" type="button" data-mode="all">All</button>
+              <button class="mode" type="button" data-mode="watch">Watchlist</button>
+              <button class="mode" type="button" data-mode="knockout">Knockout</button>
+              <button class="print-button" type="button" id="printButton">Print</button>
+            </div>
+          </div>
+          <div class="chips" id="teamChips" aria-label="Highlighted team filters"></div>
+        </div>
+        <div class="no-results" id="noResults">No fixtures match the current filters.</div>
+        <div class="months" id="months"></div>
+      </section>
+
+      <aside class="side" aria-label="Team-wise highlighted fixtures">
+        <section class="side-panel">
+          <div class="side-head">
+            <h2>Team-wise watchlist</h2>
+            <p>Group-stage fixtures for the highlighted teams. Times show venue local time, with Eastern Time beside it.</p>
+          </div>
+          <div class="team-list" id="teamList"></div>
+          <p class="source-note">Schedule checked on 2 June 2026 against the <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums">FIFA schedule page</a> and <a href="https://worldcuply.com/schedule.html">WorldCuply fixture list</a>. Knockout fixtures use bracket labels until teams qualify.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const WATCHLIST = [
+      ["Argentina", "#75aadb", "Group J"],
+      ["Brazil", "#f7d116", "Group C"],
+      ["Spain", "#aa151b", "Group H"],
+      ["Germany", "#1d1d1f", "Group E"],
+      ["France", "#2456a6", "Group I"],
+      ["England", "#c8102e", "Group L"],
+      ["Portugal", "#006847", "Group K"],
+      ["Netherlands", "#ff6900", "Group F"],
+      ["Belgium", "#f2b705", "Group G"],
+      ["Uruguay", "#58a9dc", "Group H"],
+      ["Colombia", "#fcd116", "Group K"],
+      ["Croatia", "#d71920", "Group L"],
+      ["Morocco", "#c1272d", "Group C"],
+      ["United States", "#3c3b6e", "Group D"],
+      ["Mexico", "#006847", "Group A"]
+    ].map(([name, color, group]) => ({ name, color, group }));
+
+    const watchMap = new Map(WATCHLIST.map(team => [team.name, team]));
+    const tzOffsets = { ET: -4, CT: -5, PT: -7, MX: -6 };
+    const weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July"];
+
+    const fixtures = [
+      { n: 1, date: "2026-06-11", time: "13:00", tz: "MX", stage: "Group A", home: "Mexico", away: "South Africa", venue: "Estadio Azteca", city: "Mexico City" },
+      { n: 2, date: "2026-06-11", time: "20:00", tz: "MX", stage: "Group A", home: "South Korea", away: "Czech Republic", venue: "Estadio Akron", city: "Guadalajara" },
+      { n: 3, date: "2026-06-12", time: "15:00", tz: "ET", stage: "Group B", home: "Canada", away: "Bosnia and Herzegovina", venue: "BMO Field", city: "Toronto" },
+      { n: 4, date: "2026-06-12", time: "18:00", tz: "PT", stage: "Group D", home: "United States", away: "Paraguay", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 5, date: "2026-06-13", time: "21:00", tz: "ET", stage: "Group C", home: "Haiti", away: "Scotland", venue: "Gillette Stadium", city: "Boston" },
+      { n: 6, date: "2026-06-13", time: "21:00", tz: "PT", stage: "Group D", home: "Australia", away: "Turkey", venue: "BC Place", city: "Vancouver" },
+      { n: 7, date: "2026-06-13", time: "18:00", tz: "ET", stage: "Group C", home: "Brazil", away: "Morocco", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 8, date: "2026-06-13", time: "12:00", tz: "PT", stage: "Group B", home: "Qatar", away: "Switzerland", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+      { n: 9, date: "2026-06-14", time: "19:00", tz: "ET", stage: "Group E", home: "Ivory Coast", away: "Ecuador", venue: "Lincoln Financial Field", city: "Philadelphia" },
+      { n: 10, date: "2026-06-14", time: "12:00", tz: "CT", stage: "Group E", home: "Germany", away: "Curacao", venue: "NRG Stadium", city: "Houston" },
+      { n: 11, date: "2026-06-14", time: "15:00", tz: "CT", stage: "Group F", home: "Netherlands", away: "Japan", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 12, date: "2026-06-14", time: "20:00", tz: "MX", stage: "Group F", home: "Sweden", away: "Tunisia", venue: "Estadio BBVA", city: "Monterrey" },
+      { n: 13, date: "2026-06-15", time: "18:00", tz: "ET", stage: "Group H", home: "Saudi Arabia", away: "Uruguay", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 14, date: "2026-06-15", time: "12:00", tz: "ET", stage: "Group H", home: "Spain", away: "Cape Verde", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 15, date: "2026-06-15", time: "18:00", tz: "PT", stage: "Group G", home: "Iran", away: "New Zealand", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 16, date: "2026-06-15", time: "12:00", tz: "PT", stage: "Group G", home: "Belgium", away: "Egypt", venue: "Lumen Field", city: "Seattle" },
+      { n: 17, date: "2026-06-16", time: "15:00", tz: "ET", stage: "Group I", home: "France", away: "Senegal", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 18, date: "2026-06-16", time: "18:00", tz: "ET", stage: "Group I", home: "Iraq", away: "Norway", venue: "Gillette Stadium", city: "Boston" },
+      { n: 19, date: "2026-06-16", time: "20:00", tz: "CT", stage: "Group J", home: "Argentina", away: "Algeria", venue: "Arrowhead Stadium", city: "Kansas City" },
+      { n: 20, date: "2026-06-16", time: "21:00", tz: "PT", stage: "Group J", home: "Austria", away: "Jordan", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+      { n: 21, date: "2026-06-17", time: "19:00", tz: "ET", stage: "Group L", home: "Ghana", away: "Panama", venue: "BMO Field", city: "Toronto" },
+      { n: 22, date: "2026-06-17", time: "15:00", tz: "CT", stage: "Group L", home: "England", away: "Croatia", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 23, date: "2026-06-17", time: "12:00", tz: "CT", stage: "Group K", home: "Portugal", away: "DR Congo", venue: "NRG Stadium", city: "Houston" },
+      { n: 24, date: "2026-06-17", time: "20:00", tz: "MX", stage: "Group K", home: "Uzbekistan", away: "Colombia", venue: "Estadio Azteca", city: "Mexico City" },
+      { n: 25, date: "2026-06-18", time: "12:00", tz: "ET", stage: "Group A", home: "Czech Republic", away: "South Africa", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 26, date: "2026-06-18", time: "12:00", tz: "PT", stage: "Group B", home: "Switzerland", away: "Bosnia and Herzegovina", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 27, date: "2026-06-18", time: "15:00", tz: "PT", stage: "Group B", home: "Canada", away: "Qatar", venue: "BC Place", city: "Vancouver" },
+      { n: 28, date: "2026-06-18", time: "19:00", tz: "MX", stage: "Group A", home: "Mexico", away: "South Korea", venue: "Estadio Akron", city: "Guadalajara" },
+      { n: 29, date: "2026-06-19", time: "21:00", tz: "ET", stage: "Group C", home: "Brazil", away: "Haiti", venue: "Lincoln Financial Field", city: "Philadelphia" },
+      { n: 30, date: "2026-06-19", time: "18:00", tz: "ET", stage: "Group C", home: "Scotland", away: "Morocco", venue: "Gillette Stadium", city: "Boston" },
+      { n: 31, date: "2026-06-19", time: "20:00", tz: "PT", stage: "Group D", home: "Turkey", away: "Paraguay", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+      { n: 32, date: "2026-06-19", time: "12:00", tz: "PT", stage: "Group D", home: "United States", away: "Australia", venue: "Lumen Field", city: "Seattle" },
+      { n: 33, date: "2026-06-20", time: "16:00", tz: "ET", stage: "Group E", home: "Germany", away: "Ivory Coast", venue: "BMO Field", city: "Toronto" },
+      { n: 34, date: "2026-06-20", time: "19:00", tz: "CT", stage: "Group E", home: "Ecuador", away: "Curacao", venue: "Arrowhead Stadium", city: "Kansas City" },
+      { n: 35, date: "2026-06-20", time: "12:00", tz: "CT", stage: "Group F", home: "Netherlands", away: "Sweden", venue: "NRG Stadium", city: "Houston" },
+      { n: 36, date: "2026-06-20", time: "22:00", tz: "MX", stage: "Group F", home: "Tunisia", away: "Japan", venue: "Estadio BBVA", city: "Monterrey" },
+      { n: 37, date: "2026-06-21", time: "18:00", tz: "ET", stage: "Group H", home: "Uruguay", away: "Cape Verde", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 38, date: "2026-06-21", time: "12:00", tz: "ET", stage: "Group H", home: "Spain", away: "Saudi Arabia", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 39, date: "2026-06-21", time: "12:00", tz: "PT", stage: "Group G", home: "Belgium", away: "Iran", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 40, date: "2026-06-21", time: "18:00", tz: "PT", stage: "Group G", home: "New Zealand", away: "Egypt", venue: "BC Place", city: "Vancouver" },
+      { n: 41, date: "2026-06-22", time: "20:00", tz: "ET", stage: "Group I", home: "Norway", away: "Senegal", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 42, date: "2026-06-22", time: "17:00", tz: "ET", stage: "Group I", home: "France", away: "Iraq", venue: "Lincoln Financial Field", city: "Philadelphia" },
+      { n: 43, date: "2026-06-22", time: "12:00", tz: "CT", stage: "Group J", home: "Argentina", away: "Austria", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 44, date: "2026-06-22", time: "20:00", tz: "PT", stage: "Group J", home: "Jordan", away: "Algeria", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+      { n: 45, date: "2026-06-23", time: "16:00", tz: "ET", stage: "Group L", home: "England", away: "Ghana", venue: "Gillette Stadium", city: "Boston" },
+      { n: 46, date: "2026-06-23", time: "19:00", tz: "ET", stage: "Group L", home: "Panama", away: "Croatia", venue: "BMO Field", city: "Toronto" },
+      { n: 47, date: "2026-06-23", time: "12:00", tz: "CT", stage: "Group K", home: "Portugal", away: "Uzbekistan", venue: "NRG Stadium", city: "Houston" },
+      { n: 48, date: "2026-06-23", time: "20:00", tz: "MX", stage: "Group K", home: "Colombia", away: "DR Congo", venue: "Estadio Akron", city: "Guadalajara" },
+      { n: 49, date: "2026-06-24", time: "18:00", tz: "ET", stage: "Group C", home: "Scotland", away: "Brazil", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 50, date: "2026-06-24", time: "18:00", tz: "ET", stage: "Group C", home: "Morocco", away: "Haiti", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 51, date: "2026-06-24", time: "12:00", tz: "PT", stage: "Group B", home: "Switzerland", away: "Canada", venue: "BC Place", city: "Vancouver" },
+      { n: 52, date: "2026-06-24", time: "12:00", tz: "PT", stage: "Group B", home: "Bosnia and Herzegovina", away: "Qatar", venue: "Lumen Field", city: "Seattle" },
+      { n: 53, date: "2026-06-24", time: "19:00", tz: "MX", stage: "Group A", home: "Czech Republic", away: "Mexico", venue: "Estadio Azteca", city: "Mexico City" },
+      { n: 54, date: "2026-06-24", time: "19:00", tz: "MX", stage: "Group A", home: "South Africa", away: "South Korea", venue: "Estadio BBVA", city: "Monterrey" },
+      { n: 55, date: "2026-06-25", time: "16:00", tz: "ET", stage: "Group E", home: "Curacao", away: "Ivory Coast", venue: "Lincoln Financial Field", city: "Philadelphia" },
+      { n: 56, date: "2026-06-25", time: "16:00", tz: "ET", stage: "Group E", home: "Ecuador", away: "Germany", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 57, date: "2026-06-25", time: "18:00", tz: "CT", stage: "Group F", home: "Japan", away: "Sweden", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 58, date: "2026-06-25", time: "18:00", tz: "CT", stage: "Group F", home: "Tunisia", away: "Netherlands", venue: "Arrowhead Stadium", city: "Kansas City" },
+      { n: 59, date: "2026-06-25", time: "19:00", tz: "PT", stage: "Group D", home: "Turkey", away: "United States", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 60, date: "2026-06-25", time: "19:00", tz: "PT", stage: "Group D", home: "Paraguay", away: "Australia", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+      { n: 61, date: "2026-06-26", time: "15:00", tz: "ET", stage: "Group I", home: "Norway", away: "France", venue: "Gillette Stadium", city: "Boston" },
+      { n: 62, date: "2026-06-26", time: "15:00", tz: "ET", stage: "Group I", home: "Senegal", away: "Iraq", venue: "BMO Field", city: "Toronto" },
+      { n: 63, date: "2026-06-26", time: "20:00", tz: "PT", stage: "Group G", home: "Egypt", away: "Iran", venue: "Lumen Field", city: "Seattle" },
+      { n: 64, date: "2026-06-26", time: "20:00", tz: "PT", stage: "Group G", home: "New Zealand", away: "Belgium", venue: "BC Place", city: "Vancouver" },
+      { n: 65, date: "2026-06-26", time: "19:00", tz: "CT", stage: "Group H", home: "Cape Verde", away: "Saudi Arabia", venue: "NRG Stadium", city: "Houston" },
+      { n: 66, date: "2026-06-26", time: "18:00", tz: "MX", stage: "Group H", home: "Uruguay", away: "Spain", venue: "Estadio Akron", city: "Guadalajara" },
+      { n: 67, date: "2026-06-27", time: "17:00", tz: "ET", stage: "Group L", home: "Panama", away: "England", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 68, date: "2026-06-27", time: "17:00", tz: "ET", stage: "Group L", home: "Croatia", away: "Ghana", venue: "Lincoln Financial Field", city: "Philadelphia" },
+      { n: 69, date: "2026-06-27", time: "21:00", tz: "CT", stage: "Group J", home: "Algeria", away: "Austria", venue: "Arrowhead Stadium", city: "Kansas City" },
+      { n: 70, date: "2026-06-27", time: "21:00", tz: "CT", stage: "Group J", home: "Jordan", away: "Argentina", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 71, date: "2026-06-27", time: "19:30", tz: "ET", stage: "Group K", home: "Colombia", away: "Portugal", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 72, date: "2026-06-27", time: "19:30", tz: "ET", stage: "Group K", home: "DR Congo", away: "Uzbekistan", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 73, date: "2026-06-28", time: "12:00", tz: "PT", stage: "Round of 32", home: "Group A runners-up", away: "Group B runners-up", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 74, date: "2026-06-29", time: "16:30", tz: "ET", stage: "Round of 32", home: "Group E winners", away: "Group A/B/C/D/F third place", venue: "Gillette Stadium", city: "Boston" },
+      { n: 75, date: "2026-06-29", time: "19:00", tz: "MX", stage: "Round of 32", home: "Group F winners", away: "Group C runners-up", venue: "Estadio BBVA", city: "Monterrey" },
+      { n: 76, date: "2026-06-29", time: "12:00", tz: "CT", stage: "Round of 32", home: "Group C winners", away: "Group F runners-up", venue: "NRG Stadium", city: "Houston" },
+      { n: 77, date: "2026-06-30", time: "17:00", tz: "ET", stage: "Round of 32", home: "Group I winners", away: "Group C/D/F/G/H third place", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 78, date: "2026-06-30", time: "12:00", tz: "CT", stage: "Round of 32", home: "Group E runners-up", away: "Group I runners-up", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 79, date: "2026-06-30", time: "19:00", tz: "MX", stage: "Round of 32", home: "Group A winners", away: "Group C/E/F/H/I third place", venue: "Estadio Azteca", city: "Mexico City" },
+      { n: 80, date: "2026-07-01", time: "12:00", tz: "ET", stage: "Round of 32", home: "Group L winners", away: "Group E/H/I/J/K third place", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 81, date: "2026-07-01", time: "17:00", tz: "PT", stage: "Round of 32", home: "Group D winners", away: "Group B/E/F/I/J third place", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+      { n: 82, date: "2026-07-01", time: "13:00", tz: "PT", stage: "Round of 32", home: "Group G winners", away: "Group A/E/H/I/J third place", venue: "Lumen Field", city: "Seattle" },
+      { n: 83, date: "2026-07-02", time: "19:00", tz: "ET", stage: "Round of 32", home: "Group K runners-up", away: "Group L runners-up", venue: "BMO Field", city: "Toronto" },
+      { n: 84, date: "2026-07-02", time: "12:00", tz: "PT", stage: "Round of 32", home: "Group H winners", away: "Group J runners-up", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 85, date: "2026-07-02", time: "20:00", tz: "PT", stage: "Round of 32", home: "Group B winners", away: "Group E/F/G/I/J third place", venue: "BC Place", city: "Vancouver" },
+      { n: 86, date: "2026-07-03", time: "18:00", tz: "ET", stage: "Round of 32", home: "Group J winners", away: "Group H runners-up", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 87, date: "2026-07-03", time: "20:30", tz: "CT", stage: "Round of 32", home: "Group K winners", away: "Group D/E/I/J/L third place", venue: "Arrowhead Stadium", city: "Kansas City" },
+      { n: 88, date: "2026-07-03", time: "13:00", tz: "CT", stage: "Round of 32", home: "Group D runners-up", away: "Group G runners-up", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 89, date: "2026-07-04", time: "17:00", tz: "ET", stage: "Round of 16", home: "Winner Match 74", away: "Winner Match 77", venue: "Lincoln Financial Field", city: "Philadelphia" },
+      { n: 90, date: "2026-07-04", time: "12:00", tz: "CT", stage: "Round of 16", home: "Winner Match 73", away: "Winner Match 75", venue: "NRG Stadium", city: "Houston" },
+      { n: 91, date: "2026-07-05", time: "16:00", tz: "ET", stage: "Round of 16", home: "Winner Match 76", away: "Winner Match 78", venue: "MetLife Stadium", city: "New York / New Jersey" },
+      { n: 92, date: "2026-07-05", time: "18:00", tz: "MX", stage: "Round of 16", home: "Winner Match 79", away: "Winner Match 80", venue: "Estadio Azteca", city: "Mexico City" },
+      { n: 93, date: "2026-07-06", time: "14:00", tz: "CT", stage: "Round of 16", home: "Winner Match 83", away: "Winner Match 84", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 94, date: "2026-07-06", time: "17:00", tz: "PT", stage: "Round of 16", home: "Winner Match 81", away: "Winner Match 82", venue: "Lumen Field", city: "Seattle" },
+      { n: 95, date: "2026-07-07", time: "12:00", tz: "ET", stage: "Round of 16", home: "Winner Match 86", away: "Winner Match 88", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 96, date: "2026-07-07", time: "13:00", tz: "PT", stage: "Round of 16", home: "Winner Match 85", away: "Winner Match 87", venue: "BC Place", city: "Vancouver" },
+      { n: 97, date: "2026-07-09", time: "16:00", tz: "ET", stage: "Quarter-final", home: "Winner Match 89", away: "Winner Match 90", venue: "Gillette Stadium", city: "Boston" },
+      { n: 98, date: "2026-07-10", time: "12:00", tz: "PT", stage: "Quarter-final", home: "Winner Match 93", away: "Winner Match 94", venue: "SoFi Stadium", city: "Los Angeles" },
+      { n: 99, date: "2026-07-11", time: "17:00", tz: "ET", stage: "Quarter-final", home: "Winner Match 91", away: "Winner Match 92", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 100, date: "2026-07-11", time: "20:00", tz: "CT", stage: "Quarter-final", home: "Winner Match 95", away: "Winner Match 96", venue: "Arrowhead Stadium", city: "Kansas City" },
+      { n: 101, date: "2026-07-14", time: "14:00", tz: "CT", stage: "Semi-final", home: "Winner Match 97", away: "Winner Match 98", venue: "AT&T Stadium", city: "Dallas" },
+      { n: 102, date: "2026-07-15", time: "15:00", tz: "ET", stage: "Semi-final", home: "Winner Match 99", away: "Winner Match 100", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+      { n: 103, date: "2026-07-18", time: "17:00", tz: "ET", stage: "Third place", home: "Loser Match 101", away: "Loser Match 102", venue: "Hard Rock Stadium", city: "Miami" },
+      { n: 104, date: "2026-07-19", time: "15:00", tz: "ET", stage: "Final", home: "Winner Match 101", away: "Winner Match 102", venue: "MetLife Stadium", city: "New York / New Jersey" }
+    ];
+
+    const state = {
+      mode: "all",
+      team: "All",
+      query: ""
+    };
+
+    const els = {
+      chips: document.getElementById("teamChips"),
+      months: document.getElementById("months"),
+      teamList: document.getElementById("teamList"),
+      search: document.getElementById("searchBox"),
+      noResults: document.getElementById("noResults"),
+      watchCount: document.getElementById("watchCount")
+    };
+
+    function topTeams(match) {
+      return [match.home, match.away].filter(name => watchMap.has(name));
+    }
+
+    function isKnockout(match) {
+      return !match.stage.startsWith("Group");
+    }
+
+    function teamColor(teamName) {
+      return watchMap.get(teamName)?.color || "#087a43";
+    }
+
+    function formatDate(dateString, options = {}) {
+      const date = new Date(dateString + "T12:00:00");
+      return new Intl.DateTimeFormat("en-US", options).format(date);
+    }
+
+    function localTime(match) {
+      return `${match.time} ${match.tz}`;
+    }
+
+    function easternTime(match) {
+      const [year, month, day] = match.date.split("-").map(Number);
+      const [hour, minute] = match.time.split(":").map(Number);
+      const utcMs = Date.UTC(year, month - 1, day, hour - tzOffsets[match.tz], minute);
+      const etDate = new Date(utcMs + tzOffsets.ET * 60 * 60 * 1000);
+      const hh = String(etDate.getUTCHours()).padStart(2, "0");
+      const mm = String(etDate.getUTCMinutes()).padStart(2, "0");
+      const etIso = `${etDate.getUTCFullYear()}-${String(etDate.getUTCMonth() + 1).padStart(2, "0")}-${String(etDate.getUTCDate()).padStart(2, "0")}`;
+      const dateSuffix = etIso === match.date ? "" : `, ${formatDate(etIso, { month: "short", day: "numeric" })}`;
+      return `${hh}:${mm} ET${dateSuffix}`;
+    }
+
+    function matchSearchText(match) {
+      return [
+        match.n,
+        match.date,
+        match.time,
+        match.stage,
+        match.home,
+        match.away,
+        match.venue,
+        match.city
+      ].join(" ").toLowerCase();
+    }
+
+    function visibleFixtures() {
+      return fixtures.filter(match => {
+        const teams = topTeams(match);
+        const modeOk =
+          state.mode === "all" ||
+          (state.mode === "watch" && teams.length > 0) ||
+          (state.mode === "knockout" && isKnockout(match));
+        const teamOk = state.team === "All" || match.home === state.team || match.away === state.team;
+        const queryOk = !state.query || matchSearchText(match).includes(state.query);
+        return modeOk && teamOk && queryOk;
+      });
+    }
+
+    function renderTeamLine(name) {
+      const top = watchMap.get(name);
+      const dot = top ? `<span class="team-dot" style="--team:${top.color}"></span>` : "";
+      const colorStyle = top ? ` style="--top-color:${top.color}"` : "";
+      const className = top ? "team-line is-top" : "team-line";
+      return `<span class="${className}"${colorStyle}>${dot}<span>${name}</span></span>`;
+    }
+
+    function renderFixture(match) {
+      const teams = topTeams(match);
+      const accent = teams.length ? teamColor(teams[0]) : isKnockout(match) ? "#d95c42" : "#b8c3ba";
+      const classes = ["fixture-card"];
+      if (teams.length) classes.push("is-watch");
+      if (isKnockout(match)) classes.push("is-knockout");
+      return `
+        <article class="${classes.join(" ")}" style="--accent:${accent}">
+          <div class="fixture-top">
+            <span class="time">${localTime(match)}</span>
+            <span class="match-no">M${match.n}</span>
+          </div>
+          <div class="teams">
+            ${renderTeamLine(match.home)}
+            <span class="versus">v</span>
+            ${renderTeamLine(match.away)}
+          </div>
+          <div class="fixture-meta">
+            <span>${match.stage}</span>
+            <span>${easternTime(match)}</span>
+          </div>
+          <div class="fixture-meta">
+            <span>${match.venue}, ${match.city}</span>
+          </div>
+        </article>
+      `;
+    }
+
+    function buildMonth(year, monthIndex, monthFixtures) {
+      const firstDay = new Date(year, monthIndex, 1).getDay();
+      const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+      const cells = [];
+      const totalCells = Math.ceil((firstDay + daysInMonth) / 7) * 7;
+      for (let i = 0; i < totalCells; i += 1) {
+        const dayNumber = i - firstDay + 1;
+        if (dayNumber < 1 || dayNumber > daysInMonth) {
+          cells.push(`<div class="day is-outside" aria-hidden="true"></div>`);
+          continue;
+        }
+        const iso = `${year}-${String(monthIndex + 1).padStart(2, "0")}-${String(dayNumber).padStart(2, "0")}`;
+        const matches = monthFixtures.filter(match => match.date === iso);
+        const allDateMatches = fixtures.filter(match => match.date === iso);
+        const hasWatch = allDateMatches.some(match => topTeams(match).length);
+        const dateLabel = formatDate(iso, { weekday: "long", month: "long", day: "numeric" });
+        const content = matches.length
+          ? `<div class="match-stack">${matches.map(renderFixture).join("")}</div>`
+          : (allDateMatches.length ? `<div class="empty-day">Filtered out</div>` : "");
+        cells.push(`
+          <div class="day ${hasWatch ? "has-watch" : ""}" aria-label="${dateLabel}">
+            <div class="day-head">
+              <span class="day-number">${dayNumber}</span>
+              <span>${matches.length ? `${matches.length} match${matches.length > 1 ? "es" : ""}` : ""}</span>
+            </div>
+            ${content}
+          </div>
+        `);
+      }
+
+      const matchCount = monthFixtures.length;
+      return `
+        <section class="month" aria-label="${monthNames[monthIndex]} 2026 fixtures">
+          <div class="month-title">
+            <div>
+              <h2>${monthNames[monthIndex]} 2026</h2>
+              <p>${matchCount} visible fixtures</p>
+            </div>
+            <p>Venue local times</p>
+          </div>
+          <div class="weekdays" aria-hidden="true">${weekdayNames.map(day => `<span>${day}</span>`).join("")}</div>
+          <div class="calendar-grid">${cells.join("")}</div>
+        </section>
+      `;
+    }
+
+    function renderCalendar() {
+      const visible = visibleFixtures();
+      const june = visible.filter(match => match.date.startsWith("2026-06"));
+      const july = visible.filter(match => match.date.startsWith("2026-07"));
+      els.noResults.classList.toggle("is-visible", visible.length === 0);
+      els.months.innerHTML = [
+        buildMonth(2026, 5, june),
+        buildMonth(2026, 6, july)
+      ].join("");
+      els.watchCount.textContent = fixtures.filter(match => topTeams(match).length).length;
+    }
+
+    function renderChips() {
+      els.chips.innerHTML = [
+        `<button class="chip is-active" type="button" data-team="All">All highlighted</button>`,
+        ...WATCHLIST.map(team => `<button class="chip" type="button" data-team="${team.name}" style="--team:${team.color}">${team.name}</button>`)
+      ].join("");
+      els.chips.addEventListener("click", event => {
+        const button = event.target.closest("button[data-team]");
+        if (!button) return;
+        state.team = button.dataset.team;
+        document.querySelectorAll("[data-team]").forEach(item => {
+          item.classList.toggle("is-active", item.dataset.team === state.team);
+        });
+        renderCalendar();
+      });
+    }
+
+    function renderTeamList() {
+      els.teamList.innerHTML = WATCHLIST.map(team => {
+        const matches = fixtures.filter(match => match.stage.startsWith("Group") && (match.home === team.name || match.away === team.name));
+        const rows = matches.map(match => {
+          const opponent = match.home === team.name ? match.away : match.home;
+          return `
+            <div class="team-match" style="--team:${team.color}">
+              <strong>vs. ${opponent}</strong>
+              <span>${formatDate(match.date, { weekday: "short", month: "short", day: "numeric" })} at ${localTime(match)} / ${easternTime(match)}</span>
+              <span>${match.venue}, ${match.city}</span>
+            </div>
+          `;
+        }).join("");
+        return `
+          <details class="team-card" ${["Argentina", "Brazil", "Spain", "Germany", "France"].includes(team.name) ? "open" : ""}>
+            <summary>
+              <span class="team-name"><span class="team-dot" style="--team:${team.color}"></span>${team.name}</span>
+              <span class="group-tag">${team.group}</span>
+            </summary>
+            <div class="team-matches">${rows}</div>
+          </details>
+        `;
+      }).join("");
+    }
+
+    function bindModes() {
+      document.querySelectorAll(".mode").forEach(button => {
+        button.addEventListener("click", () => {
+          state.mode = button.dataset.mode;
+          document.querySelectorAll(".mode").forEach(item => item.classList.toggle("is-active", item === button));
+          renderCalendar();
+        });
+      });
+      els.search.addEventListener("input", event => {
+        state.query = event.target.value.trim().toLowerCase();
+        renderCalendar();
+      });
+      document.getElementById("printButton").addEventListener("click", () => window.print());
+    }
+
+    renderChips();
+    renderTeamList();
+    bindModes();
+    renderCalendar();
+  </script>
+</body>
+</html>
