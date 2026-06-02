@@ -47,6 +47,58 @@
       line-height: 1.45;
     }
 
+    .portfolio-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(22, 35, 29, 0.12);
+      background: rgba(247, 248, 243, 0.92);
+      backdrop-filter: blur(16px) saturate(160%);
+    }
+
+    .portfolio-topbar-inner {
+      width: min(1680px, 100%);
+      margin: 0 auto;
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .portfolio-brand {
+      color: var(--ink);
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .portfolio-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .portfolio-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 850;
+      border-radius: var(--radius);
+    }
+
+    .portfolio-links a:hover,
+    .portfolio-links a.is-current {
+      color: #fff;
+      background: var(--grass-dark);
+    }
+
     a {
       color: inherit;
     }
@@ -644,6 +696,25 @@
     }
 
     @media (max-width: 560px) {
+      .portfolio-topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 12px;
+      }
+
+      .portfolio-links {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+
+      .portfolio-links a {
+        flex: 0 0 auto;
+      }
+
       .hero {
         min-height: 340px;
       }
@@ -694,6 +765,19 @@
   </style>
 </head>
 <body>
+  <nav class="portfolio-topbar" aria-label="Portfolio navigation">
+    <div class="portfolio-topbar-inner">
+      <a class="portfolio-brand" href="/">Afnan Mostafa</a>
+      <div class="portfolio-links">
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/publications/">Publications</a>
+        <a href="/cv/">CV</a>
+        <a class="is-current" href="/world-cup-2026-fixtures/">WC 2026</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </nav>
   <main class="shell">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-inner">

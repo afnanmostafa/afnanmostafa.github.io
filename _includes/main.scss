@@ -931,3 +931,119 @@ blockquote {
     transform: none;
   }
 }
+
+/* Portfolio navigation integration and mobile menu repair */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu-button,
+.menu-close,
+.search-button,
+.search-close-button {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 992px) {
+  .menu-button {
+    display: none !important;
+  }
+
+  .menu-close {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header {
+    z-index: 90;
+  }
+
+  .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-button.d-hide,
+  .menu-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 30px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    padding: 78px 20px 32px;
+    overflow-y: auto;
+    background: rgba(251, 251, 253, .98);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: opacity var(--motion-medium) ease, visibility var(--motion-medium) ease, transform var(--motion-medium) cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-top: 0;
+    font-size: 38px;
+  }
+
+  .nav-menu .menu-list {
+    display: grid;
+    gap: 8px;
+    width: min(420px, 100%);
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+
+  .nav-menu .menu-list .menu-item {
+    margin: 0;
+  }
+
+  .nav-menu .menu-list .menu-link {
+    display: block;
+    padding: 12px 14px;
+    font-size: 20px;
+    line-height: 1.22;
+    border-radius: 8px;
+    color: var(--text-strong);
+    background: rgba(255, 255, 255, .72);
+    border: 1px solid rgba(0, 0, 0, .07);
+  }
+
+  .nav-menu .menu-list .menu-link.active {
+    color: #fff;
+    background: var(--accent);
+  }
+}
