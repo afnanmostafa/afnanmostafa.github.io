@@ -783,7 +783,7 @@
       <div class="hero-inner">
         <p class="eyebrow">Fixture calendar</p>
         <h1 id="page-title">FIFA World Cup 2026</h1>
-        <p class="hero-copy">A calendar-format fixture board for every match from 11 June to 19 July, with Argentina, Brazil, Spain, Germany, France, and other headline teams pulled forward in the layout.</p>
+        <p class="hero-copy">A calendar-format fixture board for every match from 11 June to 19 July, with Argentina, Brazil, Spain, Germany, France, and other headline teams pulled forward in the layout. Dates and kickoff times are shown in Eastern time.</p>
         <div class="hero-stats" aria-label="Tournament summary">
           <div class="stat"><strong>104</strong><span>Matches</span></div>
           <div class="stat"><strong>48</strong><span>Teams</span></div>
@@ -818,7 +818,7 @@
         <section class="side-panel">
           <div class="side-head">
             <h2>Team-wise watchlist</h2>
-            <p>Group-stage fixtures for the highlighted teams. Times show venue local time, with Eastern Time beside it.</p>
+            <p>Group-stage fixtures for the highlighted teams. Dates and kickoff times are shown in Eastern time.</p>
           </div>
           <div class="team-list" id="teamList"></div>
           <p class="source-note">Schedule checked on 2 June 2026 against the <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums">FIFA schedule page</a> and <a href="https://worldcuply.com/schedule.html">WorldCuply fixture list</a>. Aggregate private analytics are enabled for visit counts and approximate geography; no visitor details are displayed publicly.</p>
@@ -990,11 +990,7 @@
       return new Intl.DateTimeFormat("en-US", options).format(date);
     }
 
-    function localTime(match) {
-      return `${match.time} ${match.tz}`;
-    }
-
-    function easternTime(match) {
+    function easternDateTime(match) {
       const [year, month, day] = match.date.split("-").map(Number);
       const [hour, minute] = match.time.split(":").map(Number);
       const utcMs = Date.UTC(year, month - 1, day, hour - tzOffsets[match.tz], minute);
@@ -1002,14 +998,23 @@
       const hh = String(etDate.getUTCHours()).padStart(2, "0");
       const mm = String(etDate.getUTCMinutes()).padStart(2, "0");
       const etIso = `${etDate.getUTCFullYear()}-${String(etDate.getUTCMonth() + 1).padStart(2, "0")}-${String(etDate.getUTCDate()).padStart(2, "0")}`;
-      const dateSuffix = etIso === match.date ? "" : `, ${formatDate(etIso, { month: "short", day: "numeric" })}`;
-      return `${hh}:${mm} ET${dateSuffix}`;
+      return { iso: etIso, label: `${hh}:${mm} EDT` };
+    }
+
+    function easternDate(match) {
+      return easternDateTime(match).iso;
+    }
+
+    function easternTime(match) {
+      return easternDateTime(match).label;
     }
 
     function matchSearchText(match) {
       return [
         match.n,
         match.date,
+        easternDate(match),
+        easternTime(match),
         match.time,
         match.stage,
         match.home,
@@ -1049,7 +1054,7 @@
       return `
         <article class="${classes.join(" ")}" style="--accent:${accent}">
           <div class="fixture-top">
-            <span class="time">${localTime(match)}</span>
+            <span class="time">${easternTime(match)}</span>
             <span class="match-no">M${match.n}</span>
           </div>
           <div class="teams">
@@ -1059,7 +1064,7 @@
           </div>
           <div class="fixture-meta">
             <span>${match.stage}</span>
-            <span>${easternTime(match)}</span>
+            <span>${match.city}</span>
           </div>
           <div class="fixture-meta">
             <span>${match.venue}, ${match.city}</span>
@@ -1080,8 +1085,8 @@
           continue;
         }
         const iso = `${year}-${String(monthIndex + 1).padStart(2, "0")}-${String(dayNumber).padStart(2, "0")}`;
-        const matches = monthFixtures.filter(match => match.date === iso);
-        const allDateMatches = fixtures.filter(match => match.date === iso);
+        const matches = monthFixtures.filter(match => easternDate(match) === iso);
+        const allDateMatches = fixtures.filter(match => easternDate(match) === iso);
         const hasWatch = allDateMatches.some(match => topTeams(match).length);
         const dateLabel = formatDate(iso, { weekday: "long", month: "long", day: "numeric" });
         const content = matches.length
@@ -1106,7 +1111,7 @@
               <h2>${monthNames[monthIndex]} 2026</h2>
               <p>${matchCount} visible fixtures</p>
             </div>
-            <p>Venue local times</p>
+            <p>All times EDT</p>
           </div>
           <div class="weekdays" aria-hidden="true">${weekdayNames.map(day => `<span>${day}</span>`).join("")}</div>
           <div class="calendar-grid">${cells.join("")}</div>
@@ -1116,8 +1121,8 @@
 
     function renderCalendar() {
       const visible = visibleFixtures();
-      const june = visible.filter(match => match.date.startsWith("2026-06"));
-      const july = visible.filter(match => match.date.startsWith("2026-07"));
+      const june = visible.filter(match => easternDate(match).startsWith("2026-06"));
+      const july = visible.filter(match => easternDate(match).startsWith("2026-07"));
       els.noResults.classList.toggle("is-visible", visible.length === 0);
       els.months.innerHTML = [
         buildMonth(2026, 5, june),
@@ -1150,7 +1155,7 @@
           return `
             <div class="team-match" style="--team:${team.color}">
               <strong>vs. ${opponent}</strong>
-              <span>${formatDate(match.date, { weekday: "short", month: "short", day: "numeric" })} at ${localTime(match)} / ${easternTime(match)}</span>
+              <span>${formatDate(easternDate(match), { weekday: "short", month: "short", day: "numeric" })} at ${easternTime(match)}</span>
               <span>${match.venue}, ${match.city}</span>
             </div>
           `;
